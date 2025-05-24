@@ -1,0 +1,155 @@
+/* Licensed under the Academic Free License version 3.0
+	- See a copy of the AFL-3.0 at https://spdx.org/licenses/AFL-3.0 
+	- Any copyright dedicated to the public domain: https://creativecommons.org/publicdomain/zero/1.0/ */
+:root {background-color:#CCC;color:#000}
+body,h1 {text-align:center}
+h3 {display:none}
+h1:lang(en)::after,legend:lang(en)::before {content: attr(data-en)}
+h1:lang(fr)::after,legend:lang(fr)::before {content: attr(data-fr)}
+h1:lang(de)::after,legend:lang(de)::before {content: attr(data-de)}
+h1:lang(ru)::after,legend:lang(ru)::before {content: attr(data-ru)}
+h1:lang(hi)::after,legend:lang(hi)::before {content: attr(data-hi)}
+h1:lang(bn)::after,legend:lang(bn)::before {content: attr(data-bn)}
+h1:lang(ta)::after,legend:lang(ta)::before {content: attr(data-ta)}
+h1:lang(te)::after,legend:lang(te)::before {content: attr(data-te)}
+h1:lang(gu)::after,legend:lang(gu)::before {content: attr(data-gu)}
+h1:lang(pa)::after,legend:lang(pa)::before {content: attr(data-pa)}
+h1:lang(ja)::after,legend:lang(ja)::before {content: attr(data-ja)}
+h1:lang(es)::after,legend:lang(es)::before {content: attr(data-es)}
+h1:lang(it)::after,legend:lang(it)::before {content: attr(data-it)}
+h1:lang(nl)::after,legend:lang(nl)::before {content: attr(data-nl)}
+h1:lang(sv)::after,legend:lang(sv)::before {content: attr(data-sv)}
+legend::after {font-weight: bold}
+legend:lang(en)::after {content: attr(data-enc)}
+legend:lang(fr)::after {content: attr(data-frc)}
+legend:lang(de)::after {content: attr(data-dec)}
+legend:lang(ru)::after {content: attr(data-ruc)}
+legend:lang(hi)::after {content: attr(data-hic)}
+legend:lang(bn)::after {content: attr(data-bnc)}
+legend:lang(ta)::after {content: attr(data-tac)}
+legend:lang(te)::after {content: attr(data-tec)}
+legend:lang(gu)::after {content: attr(data-guc)}
+legend:lang(pa)::after {content: attr(data-pac)}
+legend:lang(ja)::after {content: attr(data-jac)}
+legend:lang(es)::after {content: attr(data-esc)}
+legend:lang(it)::after {content: attr(data-itc)}
+legend:lang(nl)::after {content: attr(data-nlc)}
+legend:lang(sv)::after {content: attr(data-svc)}
+h1:lang(en) + form > fieldset + label > a::before,
+legend.custom:lang(en)::after {content: "Custom Emoji"}
+#fr:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(fr)::after {content:"Emoji Personnalisé"}
+#de:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(de)::after {content: "Benutzerdefiniertes Emoji"}
+#ru:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ru)::after {content: "Пользовательские эмодзи"}
+#hi-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(hi)::after {content: "कस्टम इमोजी"}
+#bn-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(bn)::after {content: "কাস্টম ইমোজি"}
+#ta-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ta)::after {content: "தனிப்பயன் ஈமோஜி"}
+#te-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(te)::after {content: "అనుకూల ఎమోజి"}
+#gu-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(gu)::after {content: "કસ્ટમ ઇમોજી"}
+#pa-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(pa)::after {content: "ਵਿਉਂਤਬੱਧ ਇਮੋਜੀ"}
+#ja-JP:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ja)::after {content: "カスタム絵文字"}
+#es-013:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(es)::after {content: "Emoji Personalizado"}
+#it:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(it)::after {content: "Emoji Personalizzati"}
+#nl:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(nl)::after {content: "Aangepaste Emoji"}
+#sv-SE:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(sv)::after {content: "Anpassad Emoji"}
+form {padding-bottom:1ex}
+a[id] {text-decoration:none;font-size:3ex;}
+a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6}
+a[id][autofocus] {opacity:1}
+a:not(:hover) {text-decoration:none}
+a:focus-visible {text-decoration:underline}
+input[name="c"]{
+	position: fixed;
+	overflow: hidden;
+	left: 0;
+	clip: rect(0 0 0 0); 
+	height: 1px; width: 1px;
+	margin: -1px; padding: 0; border: 0;
+}
+label{font-size:12ex;cursor:pointer}
+fieldset + label {font-size: medium}
+input[size="1"] {font-size:4ex}
+input[name="c"] + label::before{content:attr(for);will-change:content}
+input[name="c"]:checked + label::before{animation: glow 0.25s linear infinite alternate}
+input[name="c"]:checked + label.paused::before { animation-play-state: paused; }
+[id="👨‍🌾"]:checked + label::before{--l:"👨🏻‍🌾";--ml:"👨🏼‍🌾";--m:"👨🏽‍🌾";--md:"👨🏾‍🌾";--d:"👨🏿‍🌾"}
+[id="👨‍🍳"]:checked + label::before{--l:"👨🏻‍🍳";--ml:"👨🏼‍🍳";--m:"👨🏽‍🍳";--md:"👨🏾‍🍳";--d:"👨🏿‍🍳"}
+[id="👨‍🔧"]:checked + label::before{--l:"👨🏻‍🔧";--ml:"👨🏼‍🔧";--m:"👨🏽‍🔧";--md:"👨🏾‍🔧";--d:"👨🏿‍🔧"}
+[id="👨‍🏭"]:checked + label::before{--l:"👨🏻‍🏭";--ml:"👨🏼‍🏭";--m:"👨🏽‍🏭";--md:"👨🏾‍🏭";--d:"👨🏿‍🏭"}
+[id="👨‍💼"]:checked + label::before{--l:"👨🏻‍💼";--ml:"👨🏼‍💼";--m:"👨🏽‍💼";--md:"👨🏾‍💼";--d:"👨🏿‍💼"}
+[id="👨‍🔬"]:checked + label::before{--l:"👨🏻‍🔬";--ml:"👨🏼‍🔬";--m:"👨🏽‍🔬";--md:"👨🏾‍🔬";--d:"👨🏿‍🔬"}
+[id="👨‍✈️"]:checked + label::before{--l:"👨🏻‍✈️";--ml:"👨🏼‍✈️";--m:"👨🏽‍✈️";--md:"👨🏾‍✈️";--d:"👨🏿‍✈️"}
+[id="🕵️‍♂️"]:checked + label::before{--l:"🕵🏻‍♂️";--ml:"🕵🏼‍♂️";--m:"🕵🏽‍♂️";--md:"🕵🏾‍♂️";--d:"🕵🏿‍♂️"}
+[id="👷‍♂️"]:checked + label::before{--l:"👷🏻‍♂️";--ml:"👷🏼‍♂️";--m:"👷🏽‍♂️";--md:"👷🏾‍♂️";--d:"👷🏿‍♂️"}
+[id="👨‍🎓"]:checked + label::before{--l:"👨🏻‍🎓";--ml:"👨🏼‍🎓";--m:"👨🏽‍🎓";--md:"👨🏾‍🎓";--d:"👨🏿‍🎓"}
+[id="🤸‍♂️"]:checked + label::before{--l:"🤸🏻‍♂️";--ml:"🤸🏼‍♂️";--m:"🤸🏽‍♂️";--md:"🤸🏾‍♂️";--d:"🤸🏿‍♂️"}
+[id="👨‍💻"]:checked + label::before{--l:"👨🏻‍💻";--ml:"👨🏼‍💻";--m:"👨🏽‍💻";--md:"👨🏾‍💻";--d:"👨🏿‍💻"}
+[id="🦸‍♂️"]:checked + label::before{--l:"🦸🏻‍♂️";--ml:"🦸🏼‍♂️";--m:"🦸🏽‍♂️";--md:"🦸🏾‍♂️";--d:"🦸🏿‍♂️"}
+[id="🦹‍♂️"]:checked + label::before{--l:"🦹🏻‍♂️";--ml:"🦹🏼‍♂️";--m:"🦹🏽‍♂️";--md:"🦹🏾‍♂️";--d:"🦹🏿‍♂️"}
+[id="🧙‍♂️"]:checked + label::before{--l:"🧙🏻‍♂️";--ml:"🧙🏼‍♂️";--m:"🧙🏽‍♂️";--md:"🧙🏾‍♂️";--d:"🧙🏿‍♂️"}
+[id="👨‍⚕️"]:checked + label::before{--l:"👨🏻‍⚕️";--ml:"👨🏼‍⚕️";--m:"👨🏽‍⚕️";--md:"👨🏾‍⚕️";--d:"👨🏿‍⚕️"}
+[id="🥷"]:checked + label::before{--l:"🥷🏻";--ml:"🥷🏼";--m:"🥷🏽";--md:"🥷🏾";--d:"🥷🏿"}
+[id="🧝‍♂️"]:checked + label::before{--l:"🧝🏻‍♂️";--ml:"🧝🏼‍♂️";--m:"🧝🏽‍♂️";--md:"🧝🏾‍♂️";--d:"🧝🏿‍♂️"}
+[id="👩‍🌾"]:checked + label::before{--l:"👩🏻‍🌾";--ml:"👩🏼‍🌾";--m:"👩🏽‍🌾";--md:"👩🏾‍🌾";--d:"👩🏿‍🌾"}
+[id="👩‍🍳"]:checked + label::before{--l:"👩🏻‍🍳";--ml:"👩🏼‍🍳";--m:"👩🏽‍🍳";--md:"👩🏾‍🍳";--d:"👩🏿‍🍳"}
+[id="👩‍🔧"]:checked + label::before{--l:"👩🏻‍🔧";--ml:"👩🏼‍🔧";--m:"👩🏽‍🔧";--md:"👩🏾‍🔧";--d:"👩🏿‍🔧"}
+[id="👩‍🏭"]:checked + label::before{--l:"👩🏻‍🏭";--ml:"👩🏼‍🏭";--m:"👩🏽‍🏭";--md:"👩🏾‍🏭";--d:"👩🏿‍🏭"}
+[id="👩‍💼"]:checked + label::before{--l:"👩🏻‍💼";--ml:"👩🏼‍💼";--m:"👩🏽‍💼";--md:"👩🏾‍💼";--d:"👩🏿‍💼"}
+[id="👩‍🔬"]:checked + label::before{--l:"👩🏻‍🔬";--ml:"👩🏼‍🔬";--m:"👩🏽‍🔬";--md:"👩🏾‍🔬";--d:"👩🏿‍🔬"}
+[id="👩‍✈️"]:checked + label::before{--l:"👩🏻‍✈️";--ml:"👩🏼‍✈️";--m:"👩🏽‍✈️";--md:"👩🏾‍✈️";--d:"👩🏿‍✈️"}
+[id="🕵️‍♀️"]:checked + label::before{--l:"🕵🏻‍♀️";--ml:"🕵🏼‍♀️";--m:"🕵🏽‍♀️";--md:"🕵🏾‍♀️";--d:"🕵🏿‍♀️"}
+[id="👷‍♀️"]:checked + label::before{--l:"👷🏻‍♀️";--ml:"👷🏼‍♀️";--m:"👷🏽‍♀️";--md:"👷🏾‍♀️";--d:"👷🏿‍♀️"}
+[id="👩‍🎓"]:checked + label::before{--l:"👩🏻‍🎓";--ml:"👩🏼‍🎓";--m:"👩🏽‍🎓";--md:"👩🏾‍🎓";--d:"👩🏿‍🎓"}
+[id="🤸‍♀️"]:checked + label::before{--l:"🤸🏻‍♀️";--ml:"🤸🏼‍♀️";--m:"🤸🏽‍♀️";--md:"🤸🏾‍♀️";--d:"🤸🏿‍♀️"}
+[id="👩‍💻"]:checked + label::before{--l:"👩🏻‍💻";--ml:"👩🏼‍💻";--m:"👩🏽‍💻";--md:"👩🏾‍💻";--d:"👩🏿‍💻"}
+[id="🦸‍♀️"]:checked + label::before{--l:"🦸🏻‍♀️";--ml:"🦸🏼‍♀️";--m:"🦸🏽‍♀️";--md:"🦸🏾‍♀️";--d:"🦸🏿‍♀️"}
+[id="🦹‍♀️"]:checked + label::before{--l:"🦹🏻‍♀️";--ml:"🦹🏼‍♀️";--m:"🦹🏽‍♀️";--md:"🦹🏾‍♀️";--d:"🦹🏿‍♀️"}
+[id="🧙‍♀️"]:checked + label::before{--l:"🧙🏻‍♀️";--ml:"🧙🏼‍♀️";--m:"🧙🏽‍♀️";--md:"🧙🏾‍♀️";--d:"🧙🏿‍♀️"}
+[id="👩‍⚕️"]:checked + label::before{--l:"👩🏻‍⚕️";--ml:"👩🏼‍⚕️";--m:"👩🏽‍⚕️";--md:"👩🏾‍⚕️";--d:"👩🏿‍⚕️"}
+[id="🧘"]:checked + label::before{--l:"🧘🏻";--ml:"🧘🏼";--m:"️🧘🏽";--md:"️🧘🏾";--d:"🧘🏿"}
+[id="🧝‍♀️"]:checked + label::before{--l:"🧝🏻‍♀️";--ml:"🧝🏼‍♀️";--m:"🧝🏽‍♀️";--md:"🧝🏾‍♀️";--d:"🧝🏿‍♀️"}
+@keyframes glow {
+    0% { content:var(--l); }
+    25% { content:var(--ml); }
+    50% { content:var(--m); }
+    75% { content:var(--md); }
+    100% { content:var(--d); }
+}
+fieldset{
+	display: grid;
+	grid-template: repeat(18, 1fr) / repeat(2, 1fr);
+	grid-auto-flow: column;
+	border-radius:1ex;
+	width:fit-content;
+	height:66vh;
+	margin:0 auto;
+	background-color:#000;
+  color:#FFF;
+	overflow-y:scroll;
+}
+fieldset[disabled]{overflow-y:hidden}
+legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex}
+details[ontoggle] {cursor:pointer;display:inline-block}
+details > summary {list-style:none;font-size:3ex;cursor:help}
+details[ontoggle] > a {position:fixed;left:calc(50% - 4ex);top:4ex;background-color:#FFF}
+details[ontoggle] > a:nth-of-type(2) {top:7ex;}
+details[ontoggle] > a:nth-of-type(3) {top:10ex;}
+details[ontoggle] > a:nth-of-type(4) {top:13ex;}
+details[ontoggle] > a:nth-of-type(5) {top:16ex;}
+details[ontoggle] > a:last-of-type {top:19ex;}
+details[ontoggle][open] > a:not(:hover){opacity:0.6}
+details[ontoggle][open] > a:focus-visible{opacity:1}
+details > iframe {margin-top:0.5ex;margin-bottom:0.5ex}
