@@ -142,14 +142,3 @@ fieldset{
 }
 fieldset[disabled]{overflow-y:hidden}
 legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex}
-details[ontoggle] {cursor:pointer;display:inline-block}
-details > summary {list-style:none;font-size:3ex;cursor:help}
-details[ontoggle] > a {position:fixed;left:calc(50% - 4ex);top:4ex;background-color:#FFF}
-details[ontoggle] > a:nth-of-type(2) {top:7ex;}
-details[ontoggle] > a:nth-of-type(3) {top:10ex;}
-details[ontoggle] > a:nth-of-type(4) {top:13ex;}
-details[ontoggle] > a:nth-of-type(5) {top:16ex;}
-details[ontoggle] > a:last-of-type {top:19ex;}
-details[ontoggle][open] > a:not(:hover){opacity:0.6}
-details[ontoggle][open] > a:focus-visible{opacity:1}
-details > iframe {margin-top:0.5ex;margin-bottom:0.5ex}
