@@ -25,6 +25,8 @@ function choice(L) {
 }
 document.onreadystatechange = () => {if(document.readyState === "interactive") {
     document.querySelector("fieldset").addEventListener("click",() => choice());
+    let lh = location.hash;
+    if((lh)&&(lh.at(-1)=="N")){document.querySelector("details[ontoggle]").setAttribute('id',lh.substring(1));location.hash = lh}
     if(!("MozAppearance" in document.documentElement.style)){
       for (const cb of document.querySelectorAll("details > a[hreflang]")) {
         cb.href=`javascript:document.querySelector('details[ontoggle]').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
@@ -89,8 +91,7 @@ const faviconHref = emoji =>
 // @license-end
 	</script>
 </head>
-<body onload="document.querySelector('input[type=text]').value = '';refocus();if((location.hash)&&(location.hash.at(-1)=='N'))current(location.hash)"
-onhashchange="current(location.hash)">
+<body onload="document.querySelector('input[type=text]').value = '';refocus()" onhashchange="current(location.hash)">
 <a id="en-GB" hreflang="en-GB" href="#en-GB" title="English" autofocus aria-current="page">🇬🇧</a>
 <a id="fr" hreflang="fr" href="#fr" title="Français">🇫🇷</a>
 <a id="de" hreflang="de" href="#de" title="Deutsch">🇩🇪</a>
