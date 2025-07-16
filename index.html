@@ -38,10 +38,12 @@ function refocus() {
 	choice(b?b:'#en-GB');
 }
 function current(lh) {
-	document.querySelector("[aria-current]").removeAttribute("aria-current");
-	document.querySelector('[id^="'+ lh +'"]').setAttribute("aria-current","page");
-	document.querySelector("details[ontoggle]").removeAttribute("open");
-	refocus();
+  let l = lh.substring(1,3), d = document.querySelector('details[ontoggle]');
+  if(lh.at(-1)=="N"))d.setAttribute('id',lh.substring(1));
+  document.querySelector("[aria-current]").removeAttribute("aria-current");
+  document.querySelector('[id^="'+ l +'"]').setAttribute("aria-current","page");
+  d.removeAttribute("open");
+  refocus();
 }
 function typenext(bt,q,p,t) {
 	if(p){
@@ -77,20 +79,20 @@ const faviconHref = emoji =>
 // @license-end
 	</script>
 </head>
-<body onload="document.querySelector('input[type=text]').value = '';refocus();let h=location.hash;if((h)&&(h.at(-1)=='N')){document.querySelector('details[ontoggle]').setAttribute('id',h.substring(1));current(h.substring(1,3))}"
-onhashchange="current(location.hash.substring(1,3))">
+<body onload="document.querySelector('input[type=text]').value = '';refocus();if((location.hash)&&(location.hash.at(-1)=='N'))current(location.hash)"
+onhashchange="current(location.hash)">
 <a id="en-GB" hreflang="en-GB" href="#en-GB" title="English" autofocus aria-current="page">🇬🇧</a>
 <a id="fr" hreflang="fr" href="#fr" title="Français">🇫🇷</a>
 <a id="de" hreflang="de" href="#de" title="Deutsch">🇩🇪</a>
 <a id="ru" hreflang="ru" href="#ru" title="русский">🇷🇺</a>
 <details id="hi-IN" aria-expanded="false" ontoggle="this.setAttribute('aria-expanded',this.open?'true':'false')">
 	<summary title="भारतीय">🇮🇳</summary>
-	<a hreflang="hi-IN" href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','hi-IN');location.hash = '#hi-IN';void(0)" role="button">हिन्दी</a>
-	<a hreflang="bn-IN" href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','bn-IN');location.hash = '#bn-IN';void(0)" role="button">বাংলা</a>
-	<a hreflang="ta-IN" href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','ta-IN');location.hash = '#ta-IN';void(0)" role="button">தமிழ்</a>
-	<a hreflang="te-IN" href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','te-IN');location.hash = '#te-IN';void(0)" role="button">తెలుగు</a>
-	<a hreflang="gu-IN" href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','gu-IN');location.hash = '#gu-IN';void(0)" role="button">ગુજરાતી</a>
-	<a hreflang="pa-IN" href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','pa-IN');location.hash = '#pa-IN';void(0)" role="button">ਪੰਜਾਬੀ</a>
+	<a hreflang="hi-IN" href="#hi-IN" role="button">हिन्दी</a>
+	<a hreflang="bn-IN" href="#bn-IN" role="button">বাংলা</a>
+	<a hreflang="ta-IN" href="#ta-IN" role="button">தமிழ்</a>
+	<a hreflang="te-IN" href="#te-IN" role="button">తెలుగు</a>
+	<a hreflang="gu-IN" href="#gu-IN" role="button">ગુજરાતી</a>
+	<a hreflang="pa-IN" href="#pa-IN" role="button">ਪੰਜਾਬੀ</a>
 </details>
 <a id="ja-JP" hreflang="ja-JP" href="#ja-JP" title="日本語">🇯🇵</a>
 <a id="es-013" hreflang="es-013" href="#es-013" title="Español">🇪🇸</a>
