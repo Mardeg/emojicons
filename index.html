@@ -61,7 +61,7 @@ function typenext(bt,q,p,t) {
 	}
 }
 async function playAudio(a) {
-	if(m.canPlayType('audio/ogg;codecs="opus"').length == 0)return;
+	if(a.canPlayType('audio/ogg;codecs="opus"').length == 0)return;
 	a.playbackRate = 2;
 	await a.play();
 }
