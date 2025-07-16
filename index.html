@@ -26,7 +26,7 @@ function choice(L) {
 document.onreadystatechange = () => {if(document.readyState === "interactive") {
     document.querySelector("fieldset").addEventListener("click",() => choice());
     if(!("MozAppearance" in document.documentElement.style)){
-    	for (const cb of document.querySelectorAll("details > a[hreflang]")) {
+    	for (const cb of document.querySelectorAll("details a[hreflang]")) {
 		    cb.href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','" + cb.hreflang + '");location.hash = '#" + cb.hreflang + "';void(0)"
       }
     }
