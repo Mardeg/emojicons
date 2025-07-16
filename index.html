@@ -23,7 +23,15 @@ function choice(L) {
 	document.querySelector('input:checked + label').scrollIntoView({behavior:'smooth', block:'center'});
 	document.querySelector('input[type="text"]').placeholder = document.querySelector('input:checked').id;
 }
-document.onreadystatechange = () => {if(document.readyState === "interactive")document.querySelector("fieldset").addEventListener("click",() => choice());}
+document.onreadystatechange = () => {if(document.readyState === "interactive") {
+    document.querySelector("fieldset").addEventListener("click",() => choice());
+    if(!("MozAppearance" in document.documentElement.style)){
+    	for (const cb of document.querySelectorAll("details > a[hreflang]")) {
+		    cb.href="javascript:document.querySelector('details[ontoggle]').setAttribute('id','" + cb.hreflang + ");location.hash = '#" + cb.hreflang + "';void(0)"
+      }
+    }
+  }
+}
 function refocus() {
 	var a = document.querySelector('a[autofocus]'),
 	b = location.hash;
@@ -39,12 +47,12 @@ function refocus() {
 }
 function current(lh) {
   let l = lh.substring(1,3), d = document.querySelector('details[ontoggle]');
-  if(lh.at(-1)=="N")d.setAttribute('id',lh.substring(1));
+  if(("MozAppearance" in document.documentElement.style)&&(lh.at(-1)=="N"))d.setAttribute('id',lh.substring(1));
   document.querySelector("[aria-current]").removeAttribute("aria-current");
   document.querySelector('[id^="'+ l +'"]').setAttribute("aria-current","page");
   d.removeAttribute("open");
   refocus();
-  if(lh.at(-1)=="N")location.hash = lh;
+  if(("MozAppearance" in document.documentElement.style)&&(lh.at(-1)=="N"))location.hash = lh;
 }
 function typenext(bt,q,p,t) {
 	if(p){
