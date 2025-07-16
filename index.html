@@ -44,6 +44,7 @@ function current(lh) {
   document.querySelector('[id^="'+ l +'"]').setAttribute("aria-current","page");
   d.removeAttribute("open");
   refocus();
+  if(lh.at(-1)=="N")location.hash = lh;
 }
 function typenext(bt,q,p,t) {
 	if(p){
