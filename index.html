@@ -12,7 +12,7 @@
 		<meta name="description" content="Multilingual site favicon generator using emojis in SVG">
 		<title>Character Selection</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="icon" href="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjgwIj7wn6SgPC90ZXh0Pjwvc3ZnPg==">
+		<link rel="icon" href="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzdHlsZT5zdmd7d2lkdGg6MTAwdnc7aGVpZ2h0OjEwMHZofTwvc3R5bGU+PHRleHQgeD0iNTAlIiB5PSI0NyUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9Ijg0dmgiPvCfpKA8L3RleHQ+PC9zdmc+">
 	<script>
 // @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt
 function choice(L) {
@@ -87,7 +87,7 @@ function encodeFav(f) {
 	typenext(bt,qs,output[tc++],document.querySelector("audio"));
 }
 const faviconHref = emoji =>
-  `<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="80">${emoji}</text></svg>`
+  `<svg xmlns="http://www.w3.org/2000/svg"><style>svg{width:100vw;height:100vh}</style><text x="50%" y="47%" dominant-baseline="central" text-anchor="middle" font-size="84vh">${emoji}</text></svg>`
 // @license-end
 	</script>
 </head>
