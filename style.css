@@ -14,6 +14,9 @@ h1:lang(te)::after,legend:lang(te)::before {content: attr(data-te)}
 h1:lang(gu)::after,legend:lang(gu)::before {content: attr(data-gu)}
 h1:lang(pa)::after,legend:lang(pa)::before {content: attr(data-pa)}
 h1:lang(ja)::after,legend:lang(ja)::before {content: attr(data-ja)}
+h1:lang(ur)::after,legend:lang(ur)::before {content: attr(data-ur)}
+h1:lang(or)::after,legend:lang(or)::before {content: attr(data-or)}
+h1:lang(mr)::after,legend:lang(mr)::before {content: attr(data-mr)}
 h1:lang(es)::after,legend:lang(es)::before {content: attr(data-es)}
 h1:lang(it)::after,legend:lang(it)::before {content: attr(data-it)}
 h1:lang(nl)::after,legend:lang(nl)::before {content: attr(data-nl)}
@@ -29,6 +32,9 @@ legend:lang(ta)::after {content: attr(data-tac)}
 legend:lang(te)::after {content: attr(data-tec)}
 legend:lang(gu)::after {content: attr(data-guc)}
 legend:lang(pa)::after {content: attr(data-pac)}
+legend:lang(ur)::after {content: attr(data-urc)}
+legend:lang(or)::after {content: attr(data-orc)}
+legend:lang(mr)::after {content: attr(data-mrc)}
 legend:lang(ja)::after {content: attr(data-jac)}
 legend:lang(es)::after {content: attr(data-esc)}
 legend:lang(it)::after {content: attr(data-itc)}
@@ -54,6 +60,12 @@ legend.custom:lang(te)::after {content: "అనుకూల ఎమోజి"}
 legend.custom:lang(gu)::after {content: "કસ્ટમ ઇમોજી"}
 #pa-IN:target ~ main > form > fieldset + label > a::before,
 legend.custom:lang(pa)::after {content: "ਵਿਉਂਤਬੱਧ ਇਮੋਜੀ"}
+#mr-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(mr)::after {content: "कस्टम इमोजी"}
+#ur-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ur)::after {content: "حسب ضرورت ایموجی"}
+#or-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(or)::after {content: "କଷ୍ଟମ୍ ଇମୋଜି"}
 #ja-JP:target ~ main > form > fieldset + label > a::before,
 legend.custom:lang(ja)::after {content: "カスタム絵文字"}
 #es-013:target ~ main > form > fieldset + label > a::before,
@@ -148,6 +160,9 @@ details[ontoggle] > a:nth-of-type(2) {top:7ex;}
 details[ontoggle] > a:nth-of-type(3) {top:10ex;}
 details[ontoggle] > a:nth-of-type(4) {top:13ex;}
 details[ontoggle] > a:nth-of-type(5) {top:16ex;}
-details[ontoggle] > a:last-of-type {top:19ex;}
+details[ontoggle] > a:nth-of-type(6) {top:19ex;}
+details[ontoggle] > a:nth-of-type(7) {top:22ex;}
+details[ontoggle] > a:nth-of-type(8) {top:25ex;}
+details[ontoggle] > a:last-of-type {top:28ex;}
 details[ontoggle][open] > a:not(:hover){opacity:0.6}
 details[ontoggle][open] > a:focus-visible{opacity:1}
