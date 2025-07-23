@@ -3,7 +3,6 @@
 	- Any copyright dedicated to the public domain: https://creativecommons.org/publicdomain/zero/1.0/ */
 :root {background-color:#CCC;color:#000}
 body,h1 {text-align:center}
-body > a[hreflang] {font-size: 14pt; font-weight: bold}
 h1:lang(en)::after,legend:lang(en)::before {content: attr(data-en)}
 h1:lang(fr)::after,legend:lang(fr)::before {content: attr(data-fr)}
 h1:lang(de)::after,legend:lang(de)::before {content: attr(data-de)}
@@ -78,8 +77,8 @@ legend.custom:lang(nl)::after {content: "Aangepaste Emoji"}
 #sv-SE:target ~ main > form > fieldset + label > a::before,
 legend.custom:lang(sv)::after {content: "Anpassad Emoji"}
 form {padding-bottom:1ex}
-a[id] {text-decoration:none;font-size:3ex;}
-a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6}
+a[id] {text-decoration:none;font-size:18pt;}
+a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6; font-size: 14pt; font-weight: bold}
 a[id][autofocus] {opacity:1}
 a:not(:hover) {text-decoration:none}
 a:focus-visible {text-decoration:underline}
