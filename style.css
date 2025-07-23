@@ -78,7 +78,7 @@ legend.custom:lang(nl)::after {content: "Aangepaste Emoji"}
 legend.custom:lang(sv)::after {content: "Anpassad Emoji"}
 form {padding-bottom:1ex}
 a[id] {text-decoration:none;font-size:18pt;}
-a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6; font-size: 14pt; font-weight: bold}
+a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6}
 a[id][autofocus] {opacity:1}
 a:not(:hover) {text-decoration:none}
 a:focus-visible {text-decoration:underline}
