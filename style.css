@@ -3,6 +3,7 @@
 	- Any copyright dedicated to the public domain: https://creativecommons.org/publicdomain/zero/1.0/ */
 :root {background-color:#CCC;color:#000}
 body,h1 {text-align:center}
+body > a[hreflang] {font-size: 14pt; font-weight: bold}
 h1:lang(en)::after,legend:lang(en)::before {content: attr(data-en)}
 h1:lang(fr)::after,legend:lang(fr)::before {content: attr(data-fr)}
 h1:lang(de)::after,legend:lang(de)::before {content: attr(data-de)}
