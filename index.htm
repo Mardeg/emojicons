@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Licensed under the Academic Free License version 3.0
+	- Any copyright dedicated to the public domain -->
+	<head>
+		<link rel="license" href="https://spdx.org/licenses/AFL-3.0">
+		<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Security-Policy" content="base-uri 'self'; form-action javascript:; object-src 'none'; media-src 'self' data:; img-src 'self' data: http://geekring.net; child-src blob: https://web.archive.org https://webring.htmlhobbyist.com; connect-src 'self' blob: data: https://webring.yesterweb.org">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Multilingual site favicon generator using emojis in SVG">
+		<title>Character Selection</title>
+		<link rel="icon" href="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzdHlsZT5zdmd7d2lkdGg6MTAwdnc7aGVpZ2h0OjEwMHZofTwvc3R5bGU+PHRleHQgeD0iNTAlIiB5PSI0NyUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9Ijg0dmgiPvCfpKA8L3RleHQ+PC9zdmc+">
+  <style>
+:root {background-color:#CCC;color:#000}
+body,h1 {text-align:center}
+h1:lang(en)::after,legend:lang(en)::before {content: attr(data-en)}
+h1:lang(fr)::after,legend:lang(fr)::before {content: attr(data-fr)}
+h1:lang(de)::after,legend:lang(de)::before {content: attr(data-de)}
+h1:lang(ru)::after,legend:lang(ru)::before {content: attr(data-ru)}
+h1:lang(hi)::after,legend:lang(hi)::before {content: attr(data-hi)}
+h1:lang(bn)::after,legend:lang(bn)::before {content: attr(data-bn)}
+h1:lang(ta)::after,legend:lang(ta)::before {content: attr(data-ta)}
+h1:lang(te)::after,legend:lang(te)::before {content: attr(data-te)}
+h1:lang(gu)::after,legend:lang(gu)::before {content: attr(data-gu)}
+h1:lang(pa)::after,legend:lang(pa)::before {content: attr(data-pa)}
+h1:lang(ja)::after,legend:lang(ja)::before {content: attr(data-ja)}
+h1:lang(ur)::after,legend:lang(ur)::before {content: attr(data-ur)}
+h1:lang(or)::after,legend:lang(or)::before {content: attr(data-or)}
+h1:lang(mr)::after,legend:lang(mr)::before {content: attr(data-mr)}
+h1:lang(es)::after,legend:lang(es)::before {content: attr(data-es)}
+h1:lang(it)::after,legend:lang(it)::before {content: attr(data-it)}
+h1:lang(nl)::after,legend:lang(nl)::before {content: attr(data-nl)}
+h1:lang(sv)::after,legend:lang(sv)::before {content: attr(data-sv)}
+legend::after {font-weight: bold}
+legend:lang(en)::after {content: attr(data-enc)}
+legend:lang(fr)::after {content: attr(data-frc)}
+legend:lang(de)::after {content: attr(data-dec)}
+legend:lang(ru)::after {content: attr(data-ruc)}
+legend:lang(hi)::after {content: attr(data-hic)}
+legend:lang(bn)::after {content: attr(data-bnc)}
+legend:lang(ta)::after {content: attr(data-tac)}
+legend:lang(te)::after {content: attr(data-tec)}
+legend:lang(gu)::after {content: attr(data-guc)}
+legend:lang(pa)::after {content: attr(data-pac)}
+legend:lang(ur)::after {content: attr(data-urc)}
+legend:lang(or)::after {content: attr(data-orc)}
+legend:lang(mr)::after {content: attr(data-mrc)}
+legend:lang(ja)::after {content: attr(data-jac)}
+legend:lang(es)::after {content: attr(data-esc)}
+legend:lang(it)::after {content: attr(data-itc)}
+legend:lang(nl)::after {content: attr(data-nlc)}
+legend:lang(sv)::after {content: attr(data-svc)}
+h1:lang(en) + form > fieldset + label > a::before,
+legend.custom:lang(en)::after {content: "Custom Emoji"}
+#fr:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(fr)::after {content:"Emoji Personnalisé"}
+#de:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(de)::after {content: "Benutzerdefiniertes Emoji"}
+#ru:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ru)::after {content: "Пользовательские эмодзи"}
+#hi-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(hi)::after {content: "कस्टम इमोजी"}
+#bn-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(bn)::after {content: "কাস্টম ইমোজি"}
+#ta-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ta)::after {content: "தனிப்பயன் ஈமோஜி"}
+#te-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(te)::after {content: "అనుకూల ఎమోజి"}
+#gu-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(gu)::after {content: "કસ્ટમ ઇમોજી"}
+#pa-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(pa)::after {content: "ਵਿਉਂਤਬੱਧ ਇਮੋਜੀ"}
+#mr-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(mr)::after {content: "कस्टम इमोजी"}
+#ur-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ur)::after {content: "حسب ضرورت ایموجی"}
+#or-IN:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(or)::after {content: "କଷ୍ଟମ୍ ଇମୋଜି"}
+#ja-JP:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(ja)::after {content: "カスタム絵文字"}
+#es-013:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(es)::after {content: "Emoji Personalizado"}
+#it:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(it)::after {content: "Emoji Personalizzati"}
+#nl:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(nl)::after {content: "Aangepaste Emoji"}
+#sv-SE:target ~ main > form > fieldset + label > a::before,
+legend.custom:lang(sv)::after {content: "Anpassad Emoji"}
+form {padding-bottom:1ex}
+a[id] {text-decoration:none;font-size:3ex;}
+a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6}
+a[id][autofocus] {opacity:1}
+a:not(:hover) {text-decoration:none}
+a:focus-visible {text-decoration:underline}
+input[name="c"]{
+	position: fixed;
+	overflow: hidden;
+	left: 0;
+	clip: rect(0 0 0 0); 
+	height: 1px; width: 1px;
+	margin: -1px; padding: 0; border: 0;
+}
+label{font-size:12ex;cursor:pointer}
+fieldset + label {font-size: medium}
+input[size="1"] {font-size:4ex}
+input[name="c"] + label::before{content:attr(for);will-change:content}
+input[name="c"]:checked + label::before{animation: glow 0.25s linear infinite alternate}
+input[name="c"]:checked + label.paused::before { animation-play-state: paused; }
+[id="👨‍🌾"]:checked + label::before{--l:"👨🏻‍🌾";--ml:"👨🏼‍🌾";--m:"👨🏽‍🌾";--md:"👨🏾‍🌾";--d:"👨🏿‍🌾"}
+[id="👨‍🍳"]:checked + label::before{--l:"👨🏻‍🍳";--ml:"👨🏼‍🍳";--m:"👨🏽‍🍳";--md:"👨🏾‍🍳";--d:"👨🏿‍🍳"}
+[id="👨‍🔧"]:checked + label::before{--l:"👨🏻‍🔧";--ml:"👨🏼‍🔧";--m:"👨🏽‍🔧";--md:"👨🏾‍🔧";--d:"👨🏿‍🔧"}
+[id="👨‍🏭"]:checked + label::before{--l:"👨🏻‍🏭";--ml:"👨🏼‍🏭";--m:"👨🏽‍🏭";--md:"👨🏾‍🏭";--d:"👨🏿‍🏭"}
+[id="👨‍💼"]:checked + label::before{--l:"👨🏻‍💼";--ml:"👨🏼‍💼";--m:"👨🏽‍💼";--md:"👨🏾‍💼";--d:"👨🏿‍💼"}
+[id="👨‍🔬"]:checked + label::before{--l:"👨🏻‍🔬";--ml:"👨🏼‍🔬";--m:"👨🏽‍🔬";--md:"👨🏾‍🔬";--d:"👨🏿‍🔬"}
+[id="👨‍✈️"]:checked + label::before{--l:"👨🏻‍✈️";--ml:"👨🏼‍✈️";--m:"👨🏽‍✈️";--md:"👨🏾‍✈️";--d:"👨🏿‍✈️"}
+[id="🕵️‍♂️"]:checked + label::before{--l:"🕵🏻‍♂️";--ml:"🕵🏼‍♂️";--m:"🕵🏽‍♂️";--md:"🕵🏾‍♂️";--d:"🕵🏿‍♂️"}
+[id="👷‍♂️"]:checked + label::before{--l:"👷🏻‍♂️";--ml:"👷🏼‍♂️";--m:"👷🏽‍♂️";--md:"👷🏾‍♂️";--d:"👷🏿‍♂️"}
+[id="👨‍🎓"]:checked + label::before{--l:"👨🏻‍🎓";--ml:"👨🏼‍🎓";--m:"👨🏽‍🎓";--md:"👨🏾‍🎓";--d:"👨🏿‍🎓"}
+[id="🤸‍♂️"]:checked + label::before{--l:"🤸🏻‍♂️";--ml:"🤸🏼‍♂️";--m:"🤸🏽‍♂️";--md:"🤸🏾‍♂️";--d:"🤸🏿‍♂️"}
+[id="👨‍💻"]:checked + label::before{--l:"👨🏻‍💻";--ml:"👨🏼‍💻";--m:"👨🏽‍💻";--md:"👨🏾‍💻";--d:"👨🏿‍💻"}
+[id="🦸‍♂️"]:checked + label::before{--l:"🦸🏻‍♂️";--ml:"🦸🏼‍♂️";--m:"🦸🏽‍♂️";--md:"🦸🏾‍♂️";--d:"🦸🏿‍♂️"}
+[id="🦹‍♂️"]:checked + label::before{--l:"🦹🏻‍♂️";--ml:"🦹🏼‍♂️";--m:"🦹🏽‍♂️";--md:"🦹🏾‍♂️";--d:"🦹🏿‍♂️"}
+[id="🧙‍♂️"]:checked + label::before{--l:"🧙🏻‍♂️";--ml:"🧙🏼‍♂️";--m:"🧙🏽‍♂️";--md:"🧙🏾‍♂️";--d:"🧙🏿‍♂️"}
+[id="👨‍⚕️"]:checked + label::before{--l:"👨🏻‍⚕️";--ml:"👨🏼‍⚕️";--m:"👨🏽‍⚕️";--md:"👨🏾‍⚕️";--d:"👨🏿‍⚕️"}
+[id="🥷"]:checked + label::before{--l:"🥷🏻";--ml:"🥷🏼";--m:"🥷🏽";--md:"🥷🏾";--d:"🥷🏿"}
+[id="🧝‍♂️"]:checked + label::before{--l:"🧝🏻‍♂️";--ml:"🧝🏼‍♂️";--m:"🧝🏽‍♂️";--md:"🧝🏾‍♂️";--d:"🧝🏿‍♂️"}
+[id="👩‍🌾"]:checked + label::before{--l:"👩🏻‍🌾";--ml:"👩🏼‍🌾";--m:"👩🏽‍🌾";--md:"👩🏾‍🌾";--d:"👩🏿‍🌾"}
+[id="👩‍🍳"]:checked + label::before{--l:"👩🏻‍🍳";--ml:"👩🏼‍🍳";--m:"👩🏽‍🍳";--md:"👩🏾‍🍳";--d:"👩🏿‍🍳"}
+[id="👩‍🔧"]:checked + label::before{--l:"👩🏻‍🔧";--ml:"👩🏼‍🔧";--m:"👩🏽‍🔧";--md:"👩🏾‍🔧";--d:"👩🏿‍🔧"}
+[id="👩‍🏭"]:checked + label::before{--l:"👩🏻‍🏭";--ml:"👩🏼‍🏭";--m:"👩🏽‍🏭";--md:"👩🏾‍🏭";--d:"👩🏿‍🏭"}
+[id="👩‍💼"]:checked + label::before{--l:"👩🏻‍💼";--ml:"👩🏼‍💼";--m:"👩🏽‍💼";--md:"👩🏾‍💼";--d:"👩🏿‍💼"}
+[id="👩‍🔬"]:checked + label::before{--l:"👩🏻‍🔬";--ml:"👩🏼‍🔬";--m:"👩🏽‍🔬";--md:"👩🏾‍🔬";--d:"👩🏿‍🔬"}
+[id="👩‍✈️"]:checked + label::before{--l:"👩🏻‍✈️";--ml:"👩🏼‍✈️";--m:"👩🏽‍✈️";--md:"👩🏾‍✈️";--d:"👩🏿‍✈️"}
+[id="🕵️‍♀️"]:checked + label::before{--l:"🕵🏻‍♀️";--ml:"🕵🏼‍♀️";--m:"🕵🏽‍♀️";--md:"🕵🏾‍♀️";--d:"🕵🏿‍♀️"}
+[id="👷‍♀️"]:checked + label::before{--l:"👷🏻‍♀️";--ml:"👷🏼‍♀️";--m:"👷🏽‍♀️";--md:"👷🏾‍♀️";--d:"👷🏿‍♀️"}
+[id="👩‍🎓"]:checked + label::before{--l:"👩🏻‍🎓";--ml:"👩🏼‍🎓";--m:"👩🏽‍🎓";--md:"👩🏾‍🎓";--d:"👩🏿‍🎓"}
+[id="🤸‍♀️"]:checked + label::before{--l:"🤸🏻‍♀️";--ml:"🤸🏼‍♀️";--m:"🤸🏽‍♀️";--md:"🤸🏾‍♀️";--d:"🤸🏿‍♀️"}
+[id="👩‍💻"]:checked + label::before{--l:"👩🏻‍💻";--ml:"👩🏼‍💻";--m:"👩🏽‍💻";--md:"👩🏾‍💻";--d:"👩🏿‍💻"}
+[id="🦸‍♀️"]:checked + label::before{--l:"🦸🏻‍♀️";--ml:"🦸🏼‍♀️";--m:"🦸🏽‍♀️";--md:"🦸🏾‍♀️";--d:"🦸🏿‍♀️"}
+[id="🦹‍♀️"]:checked + label::before{--l:"🦹🏻‍♀️";--ml:"🦹🏼‍♀️";--m:"🦹🏽‍♀️";--md:"🦹🏾‍♀️";--d:"🦹🏿‍♀️"}
+[id="🧙‍♀️"]:checked + label::before{--l:"🧙🏻‍♀️";--ml:"🧙🏼‍♀️";--m:"🧙🏽‍♀️";--md:"🧙🏾‍♀️";--d:"🧙🏿‍♀️"}
+[id="👩‍⚕️"]:checked + label::before{--l:"👩🏻‍⚕️";--ml:"👩🏼‍⚕️";--m:"👩🏽‍⚕️";--md:"👩🏾‍⚕️";--d:"👩🏿‍⚕️"}
+[id="🧘"]:checked + label::before{--l:"🧘🏻";--ml:"🧘🏼";--m:"️🧘🏽";--md:"️🧘🏾";--d:"🧘🏿"}
+[id="🧝‍♀️"]:checked + label::before{--l:"🧝🏻‍♀️";--ml:"🧝🏼‍♀️";--m:"🧝🏽‍♀️";--md:"🧝🏾‍♀️";--d:"🧝🏿‍♀️"}
+@keyframes glow {
+    0% { content:var(--l); }
+    25% { content:var(--ml); }
+    50% { content:var(--m); }
+    75% { content:var(--md); }
+    100% { content:var(--d); }
+}
+fieldset{
+	display: grid;
+	grid-template: repeat(18, 1fr) / repeat(2, 1fr);
+	grid-auto-flow: column;
+	border-radius:1ex;
+	width:fit-content;
+	height:66vh;
+	margin:0 auto;
+	background-color:#000;
+  color:#FFF;
+	overflow-y:scroll;
+}
+fieldset[disabled]{overflow-y:hidden}
+legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex}
+details[ontoggle] {cursor:pointer;display:inline-block}
+details > summary {list-style:none;font-size:3ex;cursor:help}
+details[ontoggle] > a {position:fixed;left:calc(50% - 4ex);top:4ex;background-color:#FFF}
+details[ontoggle] > a:nth-of-type(2) {top:7ex;}
+details[ontoggle] > a:nth-of-type(3) {top:10ex;}
+details[ontoggle] > a:nth-of-type(4) {top:13ex;}
+details[ontoggle] > a:nth-of-type(5) {top:16ex;}
+details[ontoggle] > a:nth-of-type(6) {top:19ex;}
+details[ontoggle] > a:nth-of-type(7) {top:22ex;}
+details[ontoggle] > a:nth-of-type(8) {top:25ex;}
+details[ontoggle] > a:last-of-type {top:28ex;}
+details[ontoggle][open] > a:not(:hover){opacity:0.6}
+details[ontoggle][open] > a:focus-visible{opacity:1}
+  </style>
+	<script>
+// @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt
+function choice(L) {
+	var H = (L || location.hash),
+	H = H?H.substring(1,3):'en';
+	for (o of ['h1','legend']){document.querySelector(o).setAttribute('lang',H)}
+	document.querySelector('legend').setAttribute('data-' + H + 'c',JSON.parse(document.forms[0].elements['c'].value)[H]);
+	document.querySelector('input:checked + label').scrollIntoView({behavior:'smooth', block:'center'});
+	document.querySelector('input[type="text"]').placeholder = document.querySelector('input:checked').id;
+}
+document.onreadystatechange = () => {if(document.readyState === "interactive") {
+    document.querySelector("fieldset").addEventListener("click",() => choice());
+    let lh = location.hash;
+    if((lh)&&(lh.at(-1)=="N")){document.querySelector("details[ontoggle]").setAttribute('id',lh.substring(1));location.hash = lh}
+    if(!("MozAppearance" in document.documentElement.style)){
+    	for (const cb of document.querySelectorAll("details > a[hreflang]")) {
+		    cb.href=`javascript:document.querySelector('details[ontoggle]').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
+      }
+    }
+  }
+}
+function refocus() {
+	var a = document.querySelector('a[autofocus]'),
+	b = location.hash;
+	if(a && b){
+		a.removeAttribute('autofocus');
+	} else {
+		if(!a && !b){
+			document.querySelector('#en-GB').toggleAttribute('autofocus');
+		}
+	};
+	document.querySelector('input:checked').focus();
+	choice(b?b:'#en-GB');
+}
+function current(lh) {
+  let l = lh.substring(1,3), d = document.querySelector('details[ontoggle]');
+  if(("MozAppearance" in document.documentElement.style)&&(lh.at(-1)=="N"))d.setAttribute('id',lh.substring(1));
+  document.querySelector("[aria-current]").removeAttribute("aria-current");
+  document.querySelector('[id^="'+ l +'"]').setAttribute("aria-current","page");
+  d.removeAttribute("open");
+  refocus();
+  if(("MozAppearance" in document.documentElement.style)&&(lh.at(-1)=="N"))location.hash = lh;
+}
+function typenext(bt,q,p,t) {
+	if(p){
+		let f = document.querySelector('#f[aria-busy="false"]');
+		if(f)f.setAttribute("aria-busy","true");
+		q.value=q.value + p;
+		if(tc<20)playAudio(t);
+		else typenext(bt,q,output[tc++]);
+	}
+	else {
+		document.querySelector("#f").setAttribute("aria-busy","false");
+		let linkForFavicon = document.querySelector('head > link[rel="icon"]');
+		linkForFavicon.setAttribute("href", "data:image/svg+xml;charset=utf-8;base64," + bt);
+	}
+}
+async function playAudio(a) {
+  if(a.canPlayType('audio/ogg;codecs="opus"').length == 0)return;
+	a.playbackRate = 2;
+	await a.play();
+}
+function encodeFav(f) {
+	var m = unescape(encodeURIComponent(f?f:document.querySelector('input:checked').id)),
+	p = '<link rel="icon" href="data:image/svg+xml;charset=utf-8;base64,',
+	w = '">',
+	qs = document.querySelector('#f');
+	qs.value = "";
+	bt = btoa(faviconHref(m));
+	output = p + bt + w;
+	output = output.split('');tc = 0;
+	typenext(bt,qs,output[tc++],document.querySelector("audio"));
+}
+const faviconHref = emoji =>
+  `<svg xmlns="http://www.w3.org/2000/svg"><style>svg{width:100vw;height:100vh}</style><text x="50%" y="47%" dominant-baseline="central" text-anchor="middle" font-size="84vh">${emoji}</text></svg>`
+// @license-end
+	</script>
+</head>
+<body onload="document.querySelector('input[type=text]').value = '';refocus();" onhashchange="current(location.hash)">
+<a id="en-GB" hreflang="en-GB" href="#en-GB" title="English" autofocus aria-current="page">🇬🇧</a>
+<a id="fr" hreflang="fr" href="#fr" title="Français">🇫🇷</a>
+<a id="de" hreflang="de" href="#de" title="Deutsch">🇩🇪</a>
+<a id="ru" hreflang="ru" href="#ru" title="русский">🇷🇺</a>
+<details id="hi-IN" aria-expanded="false" ontoggle="this.setAttribute('aria-expanded',this.open?'true':'false')">
+	<summary title="भारतीय">🇮🇳</summary>
+	<a hreflang="hi-IN" href="#hi-IN">हिन्दी</a>
+	<a hreflang="bn-IN" href="#bn-IN">বাংলা</a>
+	<a hreflang="ta-IN" href="#ta-IN">தமிழ்</a>
+	<a hreflang="te-IN" href="#te-IN">తెలుగు</a>
+	<a hreflang="gu-IN" href="#gu-IN">ગુજરાતી</a>
+	<a hreflang="pa-IN" href="#pa-IN">ਪੰਜਾਬੀ</a>
+	<a hreflang="ur-IN" href="#ur-IN">اردو</a>
+	<a hreflang="or-IN" href="#or-IN">ଓଡ଼ିଆ</a>
+	<a hreflang="mr-IN" href="#mr-IN">मराठी</a>
+</details>
+<a id="ja-JP" hreflang="ja-JP" href="#ja-JP" title="日本語">🇯🇵</a>
+<a id="es-013" hreflang="es-013" href="#es-013" title="Español">🇪🇸</a>
+<a id="it" hreflang="it" href="#it" title="Italian">🇮🇹</a>
+<a id="nl" hreflang="nl" href="#nl" title="Nederlands">🇳🇱</a>
+<a id="sv-SE" hreflang="sv-SE" href="#sv-SE" title="Svenska">🇸🇪</a>
+<main aria-label="Multilingual"><h1 lang="en"
+data-en="Your Character&nbsp;"
+data-fr="Ton Caractère&nbsp;"
+data-de="Dein Charakter&nbsp;"
+data-ru="Твой характер&nbsp;"
+data-hi="आपका चरित्र&nbsp;"
+data-bn="আপনার চরিত্র&nbsp;"
+data-ta="உங்கள் பாத்திரம்&nbsp;"
+data-te="మీ క్యారెక్టర్&nbsp;"
+data-gu="તમારું પાત્ર&nbsp;"
+data-pa="ਤੁਹਾਡਾ ਚਰਿੱਤਰ&nbsp;"
+data-mr="तुमचे पात्र&nbsp;"
+data-ur="آپ کا کردار"
+data-or="ତୁମର ଚରିତ୍ର&nbsp;"
+data-ja="あなたのキャラクター&nbsp;"
+data-es="Tu Personaje&nbsp;"
+data-it="Il Vostro Personaggio&nbsp;"
+data-nl="Jouw Karakter&nbsp;"
+data-sv="Din Karaktär&nbsp;"
+>&nbsp;&#8203;</h1>
+<form action="javascript:void(encodeFav(document.querySelector('input[type=text]').value))">
+<fieldset><legend lang="en" aria-live="assertive"
+data-en="Choice"
+data-fr="Choix"
+data-de="Auswahl"
+data-ru="Выбор"
+data-hi="पसंद"
+data-bn="পছন্দ"
+data-ta="தேர்வு"
+data-te="ఎంపిక"
+data-gu="પસંદગી"
+data-pa="ਚੋਣ"
+data-mr="निवड"
+data-ur="انتخاب"
+data-or="ପସନ୍ଦ"
+data-ja="選択"
+data-es="Elección"
+data-it="Scelta"
+data-nl="Keuze"
+data-sv="Val"
+data-enc="Sorceror"
+>: </legend>
+<input type="radio" name="c" id="👨‍🌾" value='{"en":"Male Farmer", "fr":"Fermier", "de":"Ackerbauer", "ru":"Мужчина-фермер", "hi":"पुरुष किसान", "bn":"পুরুষ কৃষক", "ta":"ஆண் விவசாயி", "te":"మగ రైతు", "gu":"પુરુષ ખેડૂત", "pa":"ਮਰਦ ਕਿਸਾਨ", "ur":"مرد کسان", "or":"ପୁରୁଷ ଚାଷୀ", "mr":"पुरुष शेतकरी", "ja":"男性農夫", "es":"Agricultor", "it":"Contadino", "nl":"Mannelijke Boer", "sv":"Manlig Bonde"}'><label for="👨‍🌾">&#8203;</label>
+<input type="radio" name="c" id="👨‍🍳" value='{"en":"Male Chef", "fr":"Chef Masculin", "de":"Koch", "ru":"Мужской шеф-повар", "hi":"पुरुष शेफ", "bn":"পুরুষ শেফ", "ta":"ஆண் சமையல்காரர்", "te":"మగ చెఫ్", "gu":"પુરૂષ રસોઇયા", "pa":"ਪੁਰਸ਼ ਸ਼ੈੱਫ", "ur":"مرد شیف", "or":"ପୁରୁଷ ରୋଷେଇଆ", "mr":"पुरुष शेफ", "ja":"男性シェフ", "es":"Chef Masculino", "it":"Chef Maschio", "nl":"Mannelijke Chef-kok", "sv":"Manlig Kock"}'><label for="👨‍🍳">&#8203;</label>
+<input type="radio" name="c" id="👨‍🔧" value='{"en":"Male Mechanic", "fr":"Mécanicien", "de":"Mechaniker", "ru":"Мужской механик", "hi":"पुरुष मैकेनिक", "bn":"পুরুষ মেকানিক", "ta":"ஆண் மெக்கானிக்", "te":"మగ మెకానిక్", "gu":"પુરૂષ મિકેનિક", "pa":"ਮਰਦ ਮਕੈਨਿਕ", "ur":"مرد مکینک", "or":"ପୁରୁଷ ମେକାନିକ", "mr":"पुरुष मेकॅनिक", "ja":"男性の整備士", "es":"Mecánico", "it":"Meccanico", "nl":"Mannelijke Monteur", "sv":"Manlig Mekaniker"}'><label for="👨‍🔧">&#8203;</label>
+<input type="radio" name="c" id="👨‍🏭" value='{"en":"Male Production Engineer", "fr":"Ingénieur de Production Masculin", "de":"Produktionsingenieur", "ru":"Инженер-технолог мужского пола", "hi":"पुरुष उत्पादन अभियंता", "bn":"পুরুষ উৎপাদন প্রকৌশলী", "ta":"ஆண் தயாரிப்பு பொறியாளர்", "te":"పురుష ప్రొడక్షన్ ఇంజనీర్", "gu":"પુરૂષ ઉત્પાદન ઇજનેર", "pa":"ਪੁਰਸ਼ ਉਤਪਾਦਨ ਇੰਜੀਨੀਅਰ", "ur":"مرد پروڈکشن انجینئر", "or":"ପୁରୁଷ ପ୍ରଡକ୍ସନ ଇଞ୍ଜିନିୟର", "mr":"पुरुष उत्पादन अभियंता", "ja":"男性生産エンジニア", "es":"Ingeniero de Produccion", "it":"Ingegnere di Produzione Maschile", "nl":"Mannelijke Productie-ingenieur", "sv":"Manlig Produktionsingenjör"}'><label for="👨‍🏭">&#8203;</label>
+<input type="radio" name="c" id="👨‍💼" value='{"en":"Male Administrator", "fr":"Administrateur", "de":"Administrator", "ru":"Мужчина-администратор", "hi":"पुरुष प्रशासक", "bn":"પુરૂષ સંચાલક", "ta":"ஆண் நிர்வாகி", "te":"పురుష నిర్వాహకుడు", "gu":"પુરૂષ સંચાલક", "pa":"ਮਰਦ ਪ੍ਰਸ਼ਾਸਕ", "ur":"مرد منتظم", "or":"ପୁରୁଷ ପ୍ରଶାସକ", "mr":"पुरुष प्रशासक", "ja":"男性管理者", "es":"Administrador", "it":"Amministratore", "nl":"Mannelijke Beheerder", "sv":"Manlig Administratör"}'><label for="👨‍💼">&#8203;</label>
+<input type="radio" name="c" id="👨‍🔬" value='{"en":"Male Scientist", "fr":"Scientifique Masculin", "de":"Wissenschaftler", "ru":"Ученый-мужчина", "hi":"पुरुष वैज्ञानिक", "bn":"পুরুষ বিজ্ঞানী", "ta":"ஆண் விஞ்ஞானி", "te":"పురుష శాస్త్రవేత్త", "gu":"పురుష శాస్త్రవేత్త", "pa":"ਪੁਰਸ਼ ਵਿਗਿਆਨੀ", "ur":"مرد سائنسدان", "or":"ପୁରୁଷ ବୈଜ୍ଞାନିକ", "mr":"पुरुष शास्त्रज्ञ", "ja":"男性科学者", "es":"Científico", "it":"Scienziato", "nl":"Mannelijke Wetenschapper", "sv":"Manlig Vetenskapsman"}'><label for="👨‍🔬">&#8203;</label>
+<input type="radio" name="c" id="👨‍✈️" value='{"en":"Male Captain", "fr":"Capitaine Masculin", "de":"Kapitän", "ru":"Капитан-мужчина", "hi":"पुरुष कप्तान", "bn":"পুরুষ ক্যাপ্টেন", "ta":"ஆண் கேப்டன்", "te":"పురుష కెప్టెన్", "gu":"પુરુષ કેપ્ટન", "pa":"ਪੁਰਸ਼ ਕਪਤਾਨ", "ur":"مرد کپتان", "or":"ପୁରୁଷ ଅଧିନାୟକ", "mr":"पुरुष कॅप्टन", "ja":"男性キャプテン", "es":"Capitán", "it":"Capitano", "nl":"Mannelijke Kapitein", "sv":"Manlig Kapten"}'><label for="👨‍✈️">&#8203;</label>
+<input type="radio" name="c" id="🕵️‍♂️" value='{"en":"Male Sleuth", "fr":"Détective Masculin", "de":"Männlicher Spürhund", "ru":"Мужчина-сыщик", "hi":"पुरुष खोजी कुत्ता", "bn":"পুরুষ গোয়েন্দা", "ta":"ஆண் ஸ்லூத்", "te":"మగ స్లీత్", "gu":"પુરૂષ ડિટેક્ટીવ", "pa":"ਮਰਦ ਜਾਸੂਸ", "ur":"مرد تفتیش کار", "or":"ପୁରୁଷ ଗୁପ୍ତଚର", "mr":"पुरुष गुप्तहेर", "ja":"男性の探偵", "es":"Detective Masculino", "it":"Investigatore Maschio", "nl":"Mannelijke Speurder", "sv":"Manlig Utredare"}'><label for="🕵️‍♂️">&#8203;</label>
+<input type="radio" name="c" id="👷‍♂️" value='{"en":"Male Site Operator", "fr":"Opérateur de Site Masculin", "de":"Männlicher Seitenbetreiber", "ru":"Мужской оператор сайта", "hi":"पुरुष साइट ऑपरेटर", "bn":"পুরুষ সাইট অপারেটর", "ta":"ஆண் தள ஆபரேட்டர்", "te":"పురుష సైట్ ఆపరేటర్", "gu":"પુરૂષ સાઇટ ઓપરેટર", "pa":"ਪੁਰਸ਼ ਸਾਈਟ ਆਪਰੇਟਰ", "ur":"مرد سائٹ آپریٹر", "or":"ପୁରୁଷ ସାଇଟ୍ ଅପରେଟର", "mr":"पुरुष साइट ऑपरेटर", "ja":"男性サイトオペレーター", "es":"Operador de Sitio Masculino", "it":"Operatore Sito Maschio", "nl":"Mannelijke Bouwvakker", "sv":"Manlig Webbplatsoperatör"}'><label for="👷‍♂️">&#8203;</label>
+<input type="radio" name="c" id="👨‍🎓" value='{"en":"Male Academic", "fr":"Érudit Masculin", "de":"Männlicher Gelehrter", "ru":"Ученый-мужчина", "hi":"पुरुष अकादमिक", "bn":"পুরুষ একাডেমিক", "ta":"ஆண் கல்வியாளர்", "te":"పురుష విద్యావేత్త", "gu":"પુરૂષ શૈક્ષણિક", "pa":"ਪੁਰਸ਼ ਵਿਦਵਾਨ", "ur":"مرد تعلیمی", "or":"ପୁରୁଷ ଶିକ୍ଷାଗତ", "mr":"पुरुष शैक्षणिक", "ja":"男性学者", "es":"Erudito", "it":"Studioso", "nl":"Mannelijke Geleerde", "sv":"Manlig Lärd"}'><label for="👨‍🎓">&#8203;</label>
+<input type="radio" name="c" id="🤸‍♂️" value='{"en":"Male Athlete", "fr":"Athlète Masculin", "de":"Athlet", "ru":"Спортсмен-мужчина", "hi":"पुरुष एथलीट", "bn":"পুরুষ ক্রীড়াবিদ", "ta":"ஆண் தடகள வீரர்", "te":"పురుష అథ్లెట్", "gu":"પુરુષ એથ્લેટ", "pa":"ਪੁਰਸ਼ ਅਥਲੀਟ", "ur":"مرد ایتھلیٹ", "or":"ପୁରୁଷ ଖେଳାଳି", "mr":"पुरुष खेळाडू", "ja":"男性アスリート", "es":"El Deportista", "it":"Atleta Maschio", "nl":"Mannelijke Atleet", "sv":"Manlig Idrottare"}'><label for="🤸‍♂️">&#8203;</label>
+<input type="radio" name="c" id="👨‍💻" value='{"en":"Male Coder", "fr":"Codeur Masculin", "de":"Männlicher Codierer", "ru":"Кодер-мужчина", "hi":"पुरुष कोडर", "bn":"পুরুষ কোডার", "ta":"ஆண் குறியீட்டாளர்", "te":"పురుష కోడర్", "gu":"પુરૂષ કોડર", "pa":"ਮਰਦ ਕੋਡਰ", "ur":"مرد کوڈر", "or":"ପୁରୁଷ କୋଡର୍‌", "mr":"पुरुष कोडर", "ja":"男性コーダー", "es":"Codificador Masculino", "it":"Codificatore Maschio", "nl":"Mannelijke Codeur", "sv":"Manlig Kodare"}'><label for="👨‍💻">&#8203;</label>
+<input type="radio" name="c" id="🦸‍♂️" value='{"en":"Male Superhero", "fr":"Super-héros Masculin", "de":"Männlicher Superheld", "ru":"Мужской супергерой", "hi":"पुरुष सुपरहीरो", "bn":"পুরুষ সুপারহিরো", "ta":"ஆண் சூப்பர் ஹீரோ", "te":"మేల్ సూపర్ హీరో", "gu":"પુરૂષ સુપરહીરો", "pa":"ਪੁਰਸ਼ ਸੁਪਰਹੀਰੋ", "ur":"مرد سپر ہیرو", "or":"ପୁରୁଷ ସୁପରହିରୋ", "mr":"पुरुष सुपरहिरो", "ja":"男性のスーパーヒーロー", "es":"Superhéroe Masculino", "it":"Supereroe Maschio", "nl":"Mannelijke Superheld", "sv":"Manlig Superhjälte"}'><label for="🦸‍♂️">&#8203;</label>
+<input type="radio" name="c" id="🦹‍♂️" value='{"en":"Male Supervillain", "fr":"Super-vilain Masculin", "de":"Männlicher Superschurke", "ru":"Мужчина-суперзлодей", "hi":"पुरुष पर्यवेक्षक", "bn":"পুরুষ সুপারভিলেন", "ta":"ஆண் சூப்பர்வில்லன்", "te":"పురుష సూపర్‌విలన్", "gu":"પુરૂષ સુપરવિલન", "pa":"ਪੁਰਸ਼ ਸੁਪਰਵਿਲੇਨ", "ur":"مرد سپر ولن", "or":"ପୁରୁଷ ସୁପରଭିଲେନ୍", "mr":"पुरुष सुपरव्हिलन", "ja":"男性のスーパーヴィラン", "es":"Supervillano Masculino", "it":"Supercriminale Maschio", "nl":"Mannelijke Superschurk", "sv":"Manlig Superskurk"}'><label for="🦹‍♂️">&#8203;</label>
+<input type="radio" name="c" id="🧙‍♂️" value='{"en":"Sorcerer", "fr":"Sorcier", "de":"Zauberer", "ru":"Колдун", "hi":"जादूगर", "bn":"যাদুকর", "ta":"மந்திரவாதி", "te":"మంత్రగాడు", "gu":"જાદુગર", "pa":"ਜਾਦੂਗਰ", "ur":"جادوگر", "or":"ଯାଦୁକର", "mr":"जादूगार", "ja":"魔術師", "es":"Hechicero", "it":"Stregone", "nl":"Tovenaar", "sv":"Trollkarl"}' checked><label for="🧙‍♂️">&#8203;</label>
+<input type="radio" name="c" id="👨‍⚕️" value='{"en":"Male Healer", "fr":"Guérisseur", "de":"Arzt", "ru":"Целитель-мужчина", "hi":"पुरुष चिकित्सक", "bn":"পুরুষ নিরাময়কারী", "ta":"ஆண் குணப்படுத்துபவர்", "te":"మగ వైద్యుడు", "gu":"પુરૂષ ઉપચારક", "pa":"ਨਰ ਹੀਲਰ", "ur":"مردانہ علاج کرنے والا", "or":"ପୁରୁଷ ଚିକିତ୍ସକ", "mr":"पुरुष उपचार करणारा", "ja":"男性ヒーラー", "es":"Curador", "it":"Guaritore", "nl":"Mannelijke Genezer", "sv":"Manlig Helbrägdagörare"}'><label for="👨‍⚕️">&#8203;</label>
+<input type="radio" name="c" id="🧝‍♂️" value='{"en":"Male Elf", "fr":"Elfe Mâle", "de":"Männlicher Elf", "ru":"Эльф-мужчина", "hi":"पुरुष योगिनी", "bn":"পুরুষ এলফ", "ta":"ஆண் எல்ஃப்", "te":"మగ ఎల్ఫ్", "gu":"પુરૂષ પિશાચ", "pa":"ਨਰ ਐਲਫ", "ur":"نر یلف", "or":"ପୁରୁଷ ଏଲଫ୍", "mr":"नर एल्फ", "ja":"男性エルフ", "es":"Duende Masculino", "it":"Folletto Maschio", "nl":"Mannelijke Kabouter", "sv":"Manlig Älva"}'><label for="🧝‍♂️">&#8203;</label>
+<input type="radio" name="c" id="🥷" value='{"en":"Ninja", "fr":"Ninja", "de":"Ninja", "ru":"Ниндзя", "hi":"निंजा", "bn":"নিনজা", "ta":"நிஞ்ஜா", "te":"నింజా", "gu":"નીન્જા", "pa":"ਨਿੰਜਾ", "ur":"ننجا", "or":"ନିଞ୍ଜା", "mr":"निन्जा", "ja":"忍者", "es":"Ninja", "it":"Ninja", "nl":"Ninja", "sv":"Ninja"}'><label for="🥷">&#8203;</label>
+<input type="radio" name="c" id="👩‍🌾" value='{"en":"Female Farmer", "fr":"Fermière", "de":"Farmerin", "ru":"Женщина-фермер", "hi":"महिला किसान", "bn":"মহিলা কৃষক", "ta":"பெண் விவசாயி", "te":"మహిళా రైతు", "gu":"સ્ત્રી ખેડૂત", "pa":"ਔਰਤ ਕਿਸਾਨ", "ur":"خاتون کسان", "or":"ମହିଳା ଚାଷୀ", "mr":"महिला शेतकरी", "ja":"女性農夫", "es":"Agricultora", "it":"Contadina", "nl":"Vrouwelijke boer", "sv":"Kvinnlig bonde"}'><label for="👩‍🌾">&#8203;</label>
+<input type="radio" name="c" id="👩‍🍳" value='{"en":"Female Cook", "fr":"Cuisinière", "de":"Köchin", "ru":"Женщина-повар", "hi":"महिला बावर्ची", "bn":"মহিলা কুক", "ta":"பெண் சமையல்காரர்", "te":"ఆడ కుక్", "gu":"સ્ત્રી રસોઈયા", "pa":"ਔਰਤ ਕੁੱਕ", "ur":"خاتون باورچی", "or":"ମହିଳା ରୋଷେଇଆ", "mr":"महिला स्वयंपाकी", "ja":"女性料理人", "es":"Cocinera", "it":"Capocuoca", "nl":"Vrouwelijke kok", "sv":"Kvinnlig kock"}'><label for="👩‍🍳">&#8203;</label>
+<input type="radio" name="c" id="👩‍🔧" value='{"en":"Female Mechanic", "fr":"Mécanicienne", "de":"Mechanikerin", "ru":"Женский механик", "hi":"महिला मैकेनिक", "bn":"মহিলা মেকানিক", "ta":"பெண் மெக்கானிக்", "te":"మహిళా మెకానిక్", "gu":"સ્ત્રી મિકેનિક", "pa":"ਔਰਤ ਮਕੈਨਿਕ", "ur":"خاتون مکینک", "or":"ମହିଳା ମେକାନିକ", "mr":"महिला मेकॅनिक", "ja":"女性整備士", "es":"Mecánica", "it":"Meccanica", "nl":"Vrouwelijke monteur", "sv":"Kvinnlig mekaniker"}'><label for="👩‍🔧">&#8203;</label>
+<input type="radio" name="c" id="👩‍🏭" value='{"en":"Female Production Engineer", "fr":"Ingénieur de Production Féminin", "de":"Produktionsingenieurin", "ru":"Женский инженер-технолог", "hi":"महिला उत्पादन अभियंता", "bn":"মহিলা উৎপাদন প্রকৌশলী", "ta":"பெண் தயாரிப்பு பொறியாளர்", "te":"మహిళా ప్రొడక్షన్ ఇంజనీర్", "gu":"ફિમેલ પ્રોડક્શન એન્જિનિયર", "pa":"ਔਰਤ ਉਤਪਾਦਨ ਇੰਜੀਨੀਅਰ", "ur":"خاتون پروڈکشن انجینئر", "or":"ମହିଳା ପ୍ରଡକ୍ସନ୍ ଇଞ୍ଜିନିୟର", "mr":"महिला उत्पादन अभियंता", "ja":"女性生産エンジニア", "es":"Ingeniera de Produccion", "it":"Ingegnere di Produzione Femminile", "nl":"Vrouwelijke Productie-ingenieur", "sv":"Kvinnlig produktionsingenjör"}'><label for="👩‍🏭">&#8203;</label>
+<input type="radio" name="c" id="👩‍💼" value='{"en":"Female Administrator", "fr":"Administratrice", "de":"Administratorin", "ru":"Женщина-администратор", "hi":"महिला प्रशासक", "bn":"মহিলা প্রশাসক", "ta":"பெண் நிர்வாகி", "te":"మహిళా నిర్వాహకురాలు", "gu":"મહિલા સંચાલક", "pa":"ਮਹਿਲਾ ਪ੍ਰਸ਼ਾਸਕ", "ur":"خاتون ایڈمنسٹریٹر", "or":"ମହିଳା ପ୍ରଶାସକ", "mr":"महिला प्रशासक", "ja":"女性管理者", "es":"Administradora", "it":"Amministratrice", "nl":"Vrouwelijke Beheerder", "sv":"Kvinnlig administratör"}'><label for="👩‍💼">&#8203;</label>
+<input type="radio" name="c" id="👩‍🔬" value='{"en":"Female Scientist", "fr":"Femme Scientifique", "de":"Wissenschaftlerin", "ru":"Женщина-ученый", "hi":"महिला वैज्ञानिक", "bn":"মহিলা বিজ্ঞানী", "ta":"பெண் விஞ்ஞானி", "te":"మహిళా శాస్త్రవేత్త", "gu":"સ્ત્રી વૈજ્ઞાનિક", "pa":"ਔਰਤ ਵਿਗਿਆਨੀ", "ur":"خاتون سائنسدان", "or":"ମହିଳା ବୈଜ୍ଞାନିକ", "mr":"महिला शास्त्रज्ञ", "ja":"女性科学者", "es":"Científica", "it":"Scienziata", "nl":"Vrouwelijke Wetenschapper", "sv":"Kvinnlig Vetenskapsman"}'><label for="👩‍🔬">&#8203;</label>
+<input type="radio" name="c" id="👩‍✈️" value='{"en":"Female Captain", "fr":"Capitaine Féminin", "de":"Kapitänin", "ru":"Женщина-капитан", "hi":"महिला कप्तान", "bn":"মহিলা ক্যাপ্টেন", "ta":"মহিলা ক্যাপ্টেন", "te":"మహిళా కెప్టెన్", "gu":"మహిళా కెప్టెన్", "pa":"ਮਹਿਲਾ ਕੈਪਟਨ", "ur":"خاتون کپتان", "or":"ମହିଳା ଅଧିନାୟକ", "mr":"महिला कॅप्टन", "ja":"女性キャプテン", "es":"Capitana", "it":"Capitana", "nl":"Vrouwelijke Kapitein", "sv":"Kvinnlig kapten"}'><label for="👩‍✈️">&#8203;</label>
+<input type="radio" name="c" id="🕵️‍♀️" value='{"en":"Female Sleuth", "fr":"Détective Féminin", "de":"Weiblicher Spürhund", "ru":"Женский сыщик", "hi":"महिला खोजी कुत्ता", "bn":"মহিলা গোয়েন্দা", "ta":"பெண் ஸ்லூத்", "te":"స్త్రీ స్లీత్", "gu":"ફિમેલ ડિટેક્ટીવ", "pa":"ਔਰਤ ਜਾਸੂਸ", "ur":"خاتون تفتیش کار", "or":"ମହିଳା ଗୁପ୍ତଚର", "mr":"महिला गुप्तहेर", "ja":"女性の探偵", "es":"Detective Femenino", "it":"Investigatore Femminile", "nl":"Vrouwelijke speurder", "sv":"Kvinnlig Sleuth"}'><label for="🕵️‍♀️">&#8203;</label>
+<input type="radio" name="c" id="👷‍♀️" value='{"en":"Female Site Operator", "fr":"Opérateur de Site Féminin", "de":"Weiblicher Seitenbetreiber", "ru":"Девушка-оператор сайта", "hi":"महिला साइट ऑपरेटर", "bn":"মহিলা সাইট অপারেটর", "ta":"பெண் தள ஆபரேட்டர்", "te":"మహిళా సైట్ ఆపరేటర్", "gu":"સ્ત્રી સાઇટ ઓપરેટર", "pa":"ਔਰਤ ਸਾਈਟ ਆਪਰੇਟਰ", "ur":"خاتون سائٹ آپریٹر", "or":"ମହିଳା ସାଇଟ୍ ଅପରେଟର", "mr":"महिला साईट ऑपरेटर", "ja":"女性サイトオペレーター", "es":"Operador de Sitio Femenino", "it":"Operatore Sito Donna", "nl":"Vrouwelijke Bouwvakker", "sv":"Kvinnlig webbplatsoperatör"}'><label for="👷‍♀️">&#8203;</label>
+<input type="radio" name="c" id="👩‍🎓" value='{"en":"Female Academic", "fr":"Érudit Féminin", "de":"Weibliche Gelehrte", "ru":"Женский Академик", "hi":"महिला अकादमिक", "bn":"মহিলা একাডেমিক", "ta":"பெண் கல்வியாளர்", "te":"మహిళా విద్యావేత్త", "gu":"સ્ત્રી શૈક્ષણિક", "pa":"ਔਰਤ ਅਕਾਦਮਿਕ", "ur":"خواتین اکیڈمک", "or":"ମହିଳା ଶିକ୍ଷାଗତ", "mr":"महिला शैक्षणिक", "ja":"女性アカデミック", "es":"Erudita", "it":"Studiosa", "nl":"Vrouwelijke Geleerde", "sv":"Kvinnlig Lärd"}'><label for="👩‍🎓">&#8203;</label>
+<input type="radio" name="c" id="🤸‍♀️" value='{"en":"Female Athlete", "fr":"Athlète Féminine", "de":"Athletin", "ru":"Спортсменка", "hi":"महिला एथलीट", "bn":"মহিলা ক্রীড়াবিদ", "ta":"பெண் தடகள வீரர்", "te":"பெண் தடகள வீரர்", "gu":"મહિલા રમતવીર", "pa":"ਮਹਿਲਾ ਅਥਲੀਟ", "ur":"خاتون ایتھلیٹ", "or":"ମହିଳା ଖେଳାଳି", "mr":"महिला खेळाडू", "ja":"女性アスリート", "es":"La Deportista", "it":"Atleta Femminile", "nl":"Vrouwelijke Atleet", "sv":"Kvinnlig Idrottare"}'><label for="🤸‍♀️">&#8203;</label>
+<input type="radio" name="c" id="👩‍💻" value='{"en":"Female Coder", "fr":"Codeur Féminin", "de":"Weiblicher Coder", "ru":"Женский кодер", "hi":"महिला कोडर", "bn":"মহিলা কোডার", "ta":"பெண் குறியாக்கி", "te":"స్త్రీ కోడర్", "gu":"સ્ત્રી કોડર", "pa":"ਔਰਤ ਕੋਡਰ", "ur":"خاتون کوڈر", "or":"ମହିଳା କୋଡର୍‌", "mr":"महिला कोडर", "ja":"女性コーダー", "es":"Codificador Femenino", "it":"Codificatore Femminile", "nl":"Vrouwelijke Codeur", "sv":"Kvinnlig Kodare"}'><label for="👩‍💻">&#8203;</label>
+<input type="radio" name="c" id="🦸‍♀️" value='{"en":"Female Superhero", "fr":"Super-héros Féminin", "de":"Weiblicher Superheld", "ru":"Женский супергерой", "hi":"महिला सुपरहीरो", "bn":"মহিলা সুপারহিরো", "ta":"பெண் சூப்பர் ஹீரோ", "te":"మహిళా సూపర్ హీరో", "gu":"સ્ત્રી સુપરહીરો", "pa":"ਔਰਤ ਸੁਪਰਹੀਰੋ", "ur":"خاتون سپر ہیرو", "or":"ମହିଳା ସୁପରହିରୋ", "mr":"महिला सुपरहिरो", "ja":"女性のスーパーヒーロー", "es":"Superhéroe Femenina", "it":"Supereroe Femminile", "nl":"Vrouwelijke Superheld", "sv":"Kvinnlig Superhjälte"}'><label for="🦸‍♀️">&#8203;</label>
+<input type="radio" name="c" id="🦹‍♀️" value='{"en":"Female Supervillain", "fr":"Super-vilain Féminin", "de":"Weiblicher Superschurke", "ru":"Женский суперзлодей", "hi":"महिला पर्यवेक्षक", "bn":"মহিলা সুপারভিলেন", "ta":"பெண் சூப்பர்வில்லன்", "te":"మహిళా సూపర్‌విలన్", "gu":"સ્ત્રી સુપરવિલન", "pa":"ਮਹਿਲਾ ਸੁਪਰਵਿਲੇਨ", "ur":"خاتون سپر ولن", "or":"ମହିଳା ସୁପରଭିଲେନ୍", "mr":"महिला सुपरव्हिलन", "ja":"女性のスーパーヴィラン", "es":"Supervillana Femenina", "it":"Supercriminale Femminile", "nl":"Vrouwelijke Superschurk", "sv":"Kvinnlig Superskurk"}'><label for="🦹‍♀️">&#8203;</label>
+<input type="radio" name="c" id="🧙‍♀️" value='{"en":"Sorceress", "fr":"Sorcière", "de":"Zauberin", "ru":"Волшебница", "hi":"जादूगरनी", "bn":"যাদুকর", "ta":"சூனியக்காரி", "te":"మంత్రగత్తె", "gu":"જાદુગરી", "pa":"ਜਾਦੂਗਰੀ", "ur":"جادوگرنی", "or":"ଯାଦୁକରୀ", "mr":"चेटकीण", "ja":"魔女", "es":"Hechicera", "it":"Maga", "nl":"Tovenares", "sv":"Häxa"}'><label for="🧙‍♀️">&#8203;</label>
+<input type="radio" name="c" id="👩‍⚕️" value='{"en":"Female Healer", "fr":"Guérisseuse", "de":"Ärztin", "ru":"Женский целитель", "hi":"महिला चिकित्सक", "bn":"মহিলা নিরাময়কারী", "ta":"பெண் குணப்படுத்துபவர்", "te":"స్త్రీ వైద్యురాలు", "gu":"સ્ત્રી ઉપચારક", "pa":"ਔਰਤ ਦਾ ਇਲਾਜ ਕਰਨ ਵਾਲੀ", "ur":"خاتون شفا بخش", "or":"ମହିଳା ଚିକିତ୍ସକ", "mr":"महिला उपचार करणारी", "ja":"女性ヒーラー", "es":"Curadora", "it":"Guaritrice", "nl":"Vrouwelijke Genezer", "sv":"Kvinnlig Helbrägdagörare"}'><label for="👩‍⚕️">&#8203;</label>
+<input type="radio" name="c" id="🧝‍♀️" value='{"en":"Female Elf", "fr":"Elfe Femelle", "de":"Weibliche Elfe", "ru":"Женский эльф", "hi":"महिला योगिनी", "bn":"মহিলা এলফ", "ta":"பெண் எல்ஃப்", "te":"ఆడ ఎల్ఫ్", "gu":"સ્ત્રી પિશાચ", "pa":"ਔਰਤ ਐਲਫ", "ur":"فیمیل یلف", "or":"ମହିଳା ଏଲଫ୍", "mr":"मादी एल्फ", "ja":"女性のエルフ", "es":"Duende Femenino", "it":"Folletto Femminile", "nl":"Vrouwelijke Kabouter", "sv":"Kvinnlig Älva"}'><label for="🧝‍♀️">&#8203;</label>
+<input type="radio" name="c" id="🧘" value='{"en":"Guru", "fr":"Gourou", "de":"Guru", "ru":"Гуру", "hi":"गुरु", "bn":"গুরু", "ta":"குரு", "te":"గురువు", "gu":"ગુરુ", "pa":"ਗੁਰੂ", "ur":"گرو", "or":"ଗୁରୁ", "mr":"गुरु", "ja":"達人", "es":"Gurú", "it":"Guru", "nl":"Goeroe", "sv":"Guru"}'><label for="🧘">&#8203;</label>
+</fieldset><label><a href="https://emojipedia.org/" target="_blank" aria-label="Opens in new tab">&#8203;</a>: <input type="text" size="1" maxLength="7"
+onfocus="for(p of document.querySelectorAll('input[name=c] + label')){p.classList.add('paused');}document.querySelector('legend').classList.add('custom');this.parentNode.previousSibling.toggleAttribute('disabled')"
+onblur="if(!this.value){for(p of document.querySelectorAll('input[name=c] + label[class=paused]')){p.classList.remove('paused')};document.querySelector('legend[class=custom]').classList.remove('custom');this.parentNode.previousSibling.removeAttribute('disabled');refocus()}"
+title="📋" aria-label="Encode this"></label><br>
+<label for="f" style="font-size:initial"><a href="javascript:void(navigator.clipboard.writeText(document.querySelector('#f').value))" accesskey="c" title="[Alt][Shift]C then [Enter]" role="button">📋</a></label><input type="text" id="f" readonly aria-live="polite" aria-busy="false">&nbsp;<input type="submit" value="Favicon"></form></main>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="187" height="66" viewBox="0 0 255 90">
+<a xlink:href="https://creativecommons.org/publicdomain/zero/1.0/"><title>The source code of this page is free to
+copy/use without permission/attribution</title>
+<rect x="1" y="1" width="253" height="87" rx="4" ry="4" stroke-width="2" stroke="#000000" fill="#aab2ab"/>
+<rect x="0" y="63" width="255" height="26" stroke="none" fill="#000000"/>
+<circle cx="44" cy="42" r="40.1" stroke="none" fill="#aab2ab"/>
+<circle cx="44" cy="42" r="30.5" stroke-width="6" stroke="#000000" fill="#FFFFFF"/>
+<text fill="#000000" x="23" y="52" style="font-family:Arial,sans-serif;font-size:29px;font-weight:bold">CC</text>
+<rect x="152" y="11" width="24" height="39" rx="10.5" ry="16.5" stroke-width="9.5" stroke="#000000" fill="#FFFFFF"/>
+<line x1="154" y1="49" x2="174" y2="12" stroke="#000000" stroke-width="6"/>
+<text fill="#FFFFFF" x="138" y="83" style="font-family:Arial,sans-serif;font-size:19px;font-weight:bold">ZERO</text>
+</a></svg>
+<svg width="88" height="88" viewBox="0 0 88 88" id="svg20230425" xmlns="http://www.w3.org/2000/svg">
+<title>This is an optical illusion
+There is no circular motion</title><style>
+#move > circle {
+  animation: svgiro 2s ease-in-out infinite alternate;
+  transform-origin: 44px 44px;
+  will-change: cy, fill-opacity;
+}
+#move > circle:nth-child(2) {
+  transform: rotate(22.5deg);
+  animation-delay: 0.25s;
+}
+#move > circle:nth-child(3) {
+  transform: rotate(45deg);
+  animation-delay: 0.5s;
+}
+#move > circle:nth-child(4) {
+  transform: rotate(67.5deg);
+  animation-delay: 0.75s;
+}
+#move > circle:nth-child(5) {
+  transform: rotate(90deg);
+  animation-delay: 1s;
+}
+#move > circle:nth-child(6) {
+  transform: rotate(112.5deg);
+  animation-delay: 1.25s;
+}
+#move > circle:nth-child(7) {
+  transform: rotate(135deg);
+  animation-delay: 1.5s;
+}
+#move > circle:nth-child(8) {
+  transform: rotate(157.5deg);
+  animation-delay: 1.75s;
+}
+@keyframes svgiro {
+  from {
+    cy: 4px;
+  }
+  to {
+    cy: 84px;
+  }
+}
+</style>
+<g id="move" fill="rgba(128,128,128,0.5)" fill-opacity="0">
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="0s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="0.25s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="0.5s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="0.75s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="1s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="1.25s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="1.5s"/></circle>
+    <circle cx="44" cy="4" r="4"><animate attributeName="fill-opacity" values=".1;1;.1" dur="2s" repeatCount="indefinite" begin="1.75s"/></circle>
+  </g>
+</svg>
+<svg width="176px" height="62px" role="img" aria-label="Valid HTML5"
+   viewBox="0 0 551.505 204.629"
+   overflow="visible"
+   enable-background="new 0 0 551.505 204.629"
+   xml:space="preserve"
+   id="svg3281"
+   xmlns="http://www.w3.org/2000/svg"
+><a href="https://validator.w3.org/nu/?doc=https://emojicons.pages.dev">
+<g
+   id="g3286">
+						<rect
+   style="fill:#cccccc"
+   x="0"
+   id="rect3288"
+   height="173.802"
+   width="517.521"
+   y="13.449" /> 
+					</g><rect
+   x="5.3400002"
+   y="20.246"
+   width="510.724"
+   height="167.005"
+   id="rect3292"
+   style="fill:#ffffff" /><g
+   id="g3294">
+						<rect
+   style="fill:#b3cee1"
+   id="rect3296"
+   height="167.006"
+   width="293.229"
+   y="20.731001"
+   x="222.35001" /> 
+					</g><g
+   id="g2299">
+								<path
+   style="fill:#221b0a"
+   d="M 209.16571,56.324 L 211.29771,67.053253 L 204.70875,83.235483 C 204.70875,83.235483 200.86171,75.84577 196.04671,72.45477 C 191.99671,69.59677 187.92816,69.771966 183.79916,70.622966 C 178.48816,71.717966 174.54107,76.790253 171.92207,84.352253 C 172.17707,84.352253 171.20545,86.576 171.20545,86.576 C 168.06245,95.926 169.30916,100.29616 169.352,104.617 C 169.41812,111.28605 170.232,115.226 170.232,115.226 C 170.232,115.226 165.652,106.752 165.695,94.336 C 165.721,85.482 167.116,77.445 171.214,69.518 C 174.819,62.548 180.174,58.365 184.934,57.879 C 189.849,57.36 193.743,59.732 196.743,62.301 C 199.893,64.994 203.088,70.885 203.088,70.885 L 209.16571,56.324 z "
+   id="path2301" />
+								<path
+   style="fill:#221b0a"
+   d="M 208.826,129.637 C 208.826,129.637 205.492,135.595 203.418,137.896 C 201.343,140.187 197.627,144.231 193.027,146.256 C 188.438,148.278 186.034,148.66 181.491,148.222 C 176.959,147.784 172.75,145.164 171.274,144.062 C 169.792,142.972 166.017,139.745 163.897,136.75 C 161.755,133.738 158.428,127.722 158.428,127.722 C 158.428,127.722 160.281,133.749 161.443,136.305 C 162.106,137.777 164.172,142.275 167.09,146.199 C 169.803,149.855 175.104,156.149 183.138,157.565 C 191.175,158.99 196.693,155.384 198.062,154.508 C 199.424,153.63 202.305,151.223 204.128,149.274 C 206.037,147.236 207.83,144.632 208.826,143.082 C 209.564,141.943 210.746,139.642 210.746,139.642 L 208.826,129.637 z "
+   id="path2303" />
+							</g><g
+   id="g2305">
+								<polygon
+   style="fill:#005a9c"
+   points="70.064,56.899 88.236,118.669 106.405,56.899 119.555,56.899 89.487,158.386 88.234,158.386 69.438,95.493 50.644,158.386 49.388,158.386 19.321,56.899 32.475,56.899 50.644,118.669 62.923,77.07 56.906,56.899 70.064,56.899 "
+   id="path2307" />
+								<path
+   style="fill:#005a9c"
+   d="M 156.913,125.805 C 156.913,134.996 154.469,142.727 149.582,148.99 C 144.698,155.253 138.37,158.387 130.601,158.387 C 124.757,158.387 119.659,156.521 115.318,152.811 C 110.971,149.088 107.753,144.055 105.665,137.716 L 115.942,133.455 C 117.446,137.298 119.433,140.326 121.893,142.537 C 124.354,144.745 127.254,145.854 130.601,145.854 C 134.109,145.854 137.077,143.889 139.501,139.971 C 141.924,136.047 143.134,131.32 143.134,125.805 C 143.134,119.709 141.835,114.996 139.242,111.65 C 136.241,107.728 131.519,105.759 125.083,105.759 L 120.075,105.759 L 120.075,99.748 L 137.616,69.425 L 116.435,69.425 L 110.547,79.443 L 106.801,79.443 L 106.801,56.899 L 155.659,56.899 L 155.659,63.032 L 137.117,94.991 C 143.624,97.07 148.56,100.878 151.9,106.39 C 155.243,111.906 156.913,118.374 156.913,125.805 z "
+   id="path2309" />
+							</g><g
+   id="g3315">
+						<rect
+   style="fill:#4f4f4f"
+   id="rect3317"
+   height="5.8249998"
+   width="510.23901"
+   y="181.425"
+   x="5.3400002" /> 
+					</g><g
+   id="g3319">
+						<g
+   id="g3321">
+							<rect
+   style="fill:#b39f67"
+   id="rect3323"
+   height="5.8249998"
+   width="293.715"
+   y="176.571"
+   x="222.35001" /> 
+						</g>
+						<g
+   id="g3325">
+							<rect
+   style="fill:#b4b4b4"
+   id="rect3327"
+   height="5.8249998"
+   width="217.009"
+   y="176.571"
+   x="5.3400002" /> 
+						</g>
+					</g><g
+   id="g3329">
+						<polygon
+   style="fill:#e44d26"
+   id="polygon3331"
+   points="277.795,191.098 257.909,45.275 401.367,38.584 395.125,185.602 337.138,204.629 277.795,191.098 " />
+						<polygon
+   style="fill:#f16529"
+   id="polygon3333"
+   points="336.645,192.174 383.5,176.801 388.835,51.168 330.196,53.903 336.645,192.174 " />
+						<polygon
+   style="fill:#ebebeb"
+   id="polygon3335"
+   points="332.729,108.213 308.964,109.322 306.465,91.006 331.87,89.821 331.032,71.862 330.973,71.865 286.001,73.962 286.656,78.76 293.376,128.046 333.566,126.172 332.729,108.213 " />
+						<polygon
+   style="fill:#ebebeb"
+   id="polygon3337"
+   points="334.903,154.852 334.826,154.878 314.574,150.411 312.627,136.146 302.908,136.599 294.599,136.987 298.43,165.07 335.693,173.567 335.775,173.54 334.903,154.852 " />
+						<polygon
+   id="polygon3339"
+   points="269.401,4.859 278.528,4.433 278.949,13.45 287.298,13.061 286.877,4.043 296.004,3.619 297.277,30.925 288.151,31.35 287.724,22.207 279.375,22.596 279.802,31.74 270.675,32.165 269.401,4.859 " />
+						<polygon
+   id="polygon3341"
+   points="308.428,12.113 300.393,12.487 299.97,3.433 325.171,2.258 325.594,11.312 317.555,11.687 318.405,29.939 309.278,30.365 308.428,12.113 " />
+						<polygon
+   id="polygon3343"
+   points="329.17,2.071 338.687,1.627 344.988,10.949 350.388,1.082 359.908,0.638 361.183,27.944 352.092,28.368 351.461,14.833 345.635,24.834 345.479,24.842 338.742,15.427 339.373,28.961 330.443,29.378 329.17,2.071 " />
+						<polygon
+   id="polygon3345"
+   points="364.451,0.426 373.581,0 374.434,18.281 387.27,17.682 387.69,26.708 365.726,27.732 364.451,0.426 " />
+						<polygon
+   style="fill:#ffffff"
+   id="polygon3347"
+   points="332.666,108.216 333.504,126.175 355.62,125.144 354.621,148.531 334.843,154.872 335.714,173.556 372.059,161.636 372.184,158.587 374.199,111.111 374.413,106.27 369.573,106.496 332.666,108.216 " />
+						<polygon
+   style="fill:#ffffff"
+   id="polygon3349"
+   points="330.973,71.865 331.492,83.02 331.808,89.781 331.81,89.824 375.131,87.804 375.131,87.804 375.189,87.801 375.36,83.749 375.756,74.604 375.961,69.767 330.973,71.865 " />
+					</g><g
+   id="g3351">
+						<rect
+   style="fill:#4f4f4f"
+   id="rect3353"
+   height="165.401"
+   width="5.8260002"
+   y="20.246"
+   x="510.72501" /> 
+					</g><g
+   id="g3355">
+						<rect
+   style="fill:#b39f67"
+   id="rect3357"
+   height="160.694"
+   width="5.8260002"
+   y="20.731001"
+   x="504.89801" /> 
+					</g><g
+   id="g3359">
+						<polygon
+   style="fill:#980f08"
+   id="polygon3361"
+   points="402.462,115.4 425.766,92.097 454.409,120.74 528.202,46.947 551.505,70.25 456.352,165.405 402.462,115.4 " />
+					</g><g
+   id="g3363">
+						<polygon
+   style="fill:#840b08"
+   id="polygon3365"
+   points="410.389,107.594 425.28,93.068 453.924,121.711 527.717,47.918 538.843,58.063 455.865,140.166 410.389,107.594 " />
+					</g>
+	</a></svg>
+<audio onended="typenext(bt,document.querySelector('#f'),output[tc++],this)"><source src="data:audio/webm;base64,T2dnUwACAAAAAAAAAAA8LIVUAAAAAMUMQoABE09wdXNIZWFkAQJ4AIC7AAAAAABPZ2dTAAAAAAAAAAAAADwshVQBAAAAcZ6uwgE2T3B1c1RhZ3MNAAAATGF2ZjU1LjMzLjEwMAEAAAAVAAAAZW5jb2Rlcj1MYXZmNTUuMzMuMTAwT2dnUwAEBgEAAAAAAAA8LIVUAgAAAJiythACDAygf+pqf4dMZZBaQnOgf/dpvPz/3Kt2ZbU=" type="audio/webm"></audio>
+</body></html>
