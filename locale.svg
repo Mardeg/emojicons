@@ -1,98 +1,97 @@
-<?xml version="1.0" standalone="yes"?>
-<svg xmlns = "http://www.w3.org/2000/svg" version="2" viewBox="0 0 480 1000">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 480 1000">
 <style>
 /* <![CDATA[ */
 svg{width:100vw;height:100vh;background-color:#CCC}
-iframe{border:0}
-iframe,foreignObject{width:480px;height:1000px}
+iframe{width:480px;height:1000px;border:0}
 /* ]]> */
 </style>
-    <foreignObject x="0" y="0" systemLanguage="fr">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="fr">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#fr" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="de">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="de">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#de" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="ru">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ru">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#ru" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="hi-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="hi-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#hi-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="bn-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="bn-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#bn-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="ta-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ta-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#ta-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="te-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="te-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#te-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="gu-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="gu-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#gu-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="pa-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="pa-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#pa-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="ur-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ur-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#ur-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="or-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="or-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#or-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="mr-IN">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="mr-IN">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#mr-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="ja-JP">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ja-JP">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#ja-JP" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="es-013">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="es-013">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#es-013" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="it">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="it">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#it" scrolling="no"></iframe> autofocus
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="nl">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="nl">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#nl" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="sv-SE">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="sv-SE">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#sv-SE" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" systemLanguage="en,">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="en,">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm" scrolling="no"></iframe>
       </body>
