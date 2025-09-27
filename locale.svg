@@ -91,7 +91,7 @@ iframe{width:480px;height:1000px;border:0}
         <iframe src="index.htm#sv-SE" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="en,">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="en">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm" scrolling="no"></iframe>
       </body>
