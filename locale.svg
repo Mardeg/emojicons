@@ -92,8 +92,8 @@ iframe,foreignObject{width:480px;height:1000px}
         <iframe src="index.htm#sv-SE" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0">
-      <body xmlns="http://www.w3.org/1999/xhtml" systemLanguage="en,">
+    <foreignObject x="0" y="0" systemLanguage="en,">
+      <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm" scrolling="no"></iframe>
       </body>
     </foreignObject>
