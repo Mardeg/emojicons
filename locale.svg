@@ -6,17 +6,18 @@ svg{width:100vw;height:100vh;background-color:#CCC}
 iframe{width:480px;height:1000px;border:0}
 /* ]]> */
 </style>
+  <switch>
     <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="fr-FR">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#fr" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="de">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="de-DE">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#de" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ru">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ru-RU">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#ru" scrolling="no"></iframe>
       </body>
@@ -76,12 +77,12 @@ iframe{width:480px;height:1000px;border:0}
         <iframe src="index.htm#es-013" scrolling="no"></iframe>
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="it">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="it-IT">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#it" scrolling="no"></iframe> autofocus
       </body>
     </foreignObject>
-    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="nl">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="nl-NL">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#nl" scrolling="no"></iframe>
       </body>
@@ -91,4 +92,10 @@ iframe{width:480px;height:1000px;border:0}
         <iframe src="index.htm#sv-SE" scrolling="no"></iframe>
       </body>
     </foreignObject>
+    <foreignObject x="0" y="0" width="480" height="1000">
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <iframe src="index.htm" scrolling="no"></iframe>
+      </body>
+    </foreignObject>
+  </switch>
 </svg>
