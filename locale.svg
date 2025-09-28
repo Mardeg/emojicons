@@ -6,7 +6,7 @@ svg{width:100vw;height:100vh;background-color:#CCC}
 iframe{width:480px;height:1000px;border:0}
 /* ]]> */
 </style>
-    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="fr">
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="fr-FR">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#fr" scrolling="no"></iframe>
       </body>
