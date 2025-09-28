@@ -147,6 +147,11 @@ iframe{width:480px;height:1000px;border:0}
         <iframe src="index.htm#pa-IN" scrolling="no"></iframe>
       </body>
     </foreignObject>
+    <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="pa-PK">
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <iframe src="index.htm#pa-IN" scrolling="no"></iframe>
+      </body>
+    </foreignObject>
     <foreignObject x="0" y="0" width="480" height="1000" systemLanguage="ur">
       <body xmlns="http://www.w3.org/1999/xhtml">
         <iframe src="index.htm#ur-IN" scrolling="no"></iframe>
