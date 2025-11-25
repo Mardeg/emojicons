@@ -9,5 +9,6 @@
 		<Attribute name="height" value="200" />
 	 </DataObject>
 	</PageMap>
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://emojicons.pages.dev/" />
  </url>
 </urlset>
