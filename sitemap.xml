@@ -9,7 +9,24 @@
 		<Attribute name="height" value="200" />
 	 </DataObject>
 	</PageMap>
-	<xhtml:link rel="alternate" hreflang="en" href="https://emojicons.pages.dev/" />
+	<xhtml:link rel="alternate" hreflang="en" href="https://emojicons.pages.dev/#en-GB" />
+	<xhtml:link rel="alternate" hreflang="fr" href="https://emojicons.pages.dev/#fr" />
+	<xhtml:link rel="alternate" hreflang="de" href="https://emojicons.pages.dev/#de" />
+	<xhtml:link rel="alternate" hreflang="ru" href="https://emojicons.pages.dev/#ru" />
+	<xhtml:link rel="alternate" hreflang="it" href="https://emojicons.pages.dev/#it" />
+	<xhtml:link rel="alternate" hreflang="nl" href="https://emojicons.pages.dev/#nl" />
+	<xhtml:link rel="alternate" hreflang="es" href="https://emojicons.pages.dev/#es-013" />
+	<xhtml:link rel="alternate" hreflang="ja" href="https://emojicons.pages.dev/#ja-JP" />
+	<xhtml:link rel="alternate" hreflang="sv" href="https://emojicons.pages.dev/#sv-SE" />
+	<xhtml:link rel="alternate" hreflang="hi" href="https://emojicons.pages.dev/#hi-IN" />
+	<xhtml:link rel="alternate" hreflang="bn" href="https://emojicons.pages.dev/#bn-IN" />
+	<xhtml:link rel="alternate" hreflang="ta" href="https://emojicons.pages.dev/#ta-IN" />
+	<xhtml:link rel="alternate" hreflang="te" href="https://emojicons.pages.dev/#te-IN" />
+	<xhtml:link rel="alternate" hreflang="gu" href="https://emojicons.pages.dev/#gu-IN" />
+	<xhtml:link rel="alternate" hreflang="pa" href="https://emojicons.pages.dev/#pa-IN" />
+	<xhtml:link rel="alternate" hreflang="ur" href="https://emojicons.pages.dev/#ur-IN" />
+	<xhtml:link rel="alternate" hreflang="or" href="https://emojicons.pages.dev/#or-IN" />
+	<xhtml:link rel="alternate" hreflang="mr" href="https://emojicons.pages.dev/#mr-IN" />
 	<xhtml:link rel="alternate" hreflang="x-default" href="https://emojicons.pages.dev/" />
  </url>
 </urlset>
