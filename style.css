@@ -166,3 +166,4 @@ details[ontoggle] > a:nth-of-type(8) {top:25ex;}
 details[ontoggle] > a:last-of-type {top:28ex;}
 details[ontoggle][open] > a:not(:hover){opacity:0.6}
 details[ontoggle][open] > a:focus-visible{opacity:1}
+#f,[type="submit"]{font-size:24px}
