@@ -118,17 +118,19 @@ const faviconHref = emoji =>
 <a id="fr" hreflang="fr" href="#fr" title="Français" property="inLanguage" content="fr">🇫🇷</a>
 <a id="de" hreflang="de" href="#de" title="Deutsch" property="inLanguage" content="de">🇩🇪</a>
 <a id="ru" hreflang="ru" href="#ru" title="русский" property="inLanguage" content="ru">🇷🇺</a>
-<details id="hi-IN" aria-expanded="false" ontoggle="this.setAttribute('aria-expanded',this.open?'true':'false')">
-	<summary title="भारतीय">🇮🇳</summary>
-	<a hreflang="hi-IN" href="#hi-IN" property="inLanguage" content="hi">हिन्दी</a>
-	<a hreflang="bn-IN" href="#bn-IN" property="inLanguage" content="bn">বাংলা</a>
-	<a hreflang="ta-IN" href="#ta-IN" property="inLanguage" content="ta">தமிழ்</a>
-	<a hreflang="te-IN" href="#te-IN" property="inLanguage" content="te">తెలుగు</a>
-	<a hreflang="gu-IN" href="#gu-IN" property="inLanguage" content="gu">ગુજરાતી</a>
-	<a hreflang="pa-IN" href="#pa-IN" property="inLanguage" content="pa">ਪੰਜਾਬੀ</a>
-	<a hreflang="ur-IN" href="#ur-IN" property="inLanguage" content="ur">اردو</a>
-	<a hreflang="or-IN" href="#or-IN" property="inLanguage" content="or">ଓଡ଼ିଆ</a>
-	<a hreflang="mr-IN" href="#mr-IN" property="inLanguage" content="mr">मराठी</a>
+<details id="hi-IN" ontoggle="this.firstElementChild.setAttribute('aria-expanded',this.open?'true':'false')">
+	<summary aria-expanded="false" role="button" aria-haspopup="true" aria-controls="INlangs" aria-label="Indian languages" title="भारतीय भाषाएँ">🇮🇳</summary>
+	<ul role="menu" id="INlangs">
+		<li role="menuitem"><a hreflang="hi-IN" href="#hi-IN" property="inLanguage" content="hi">हिन्दी</a></li>
+		<li role="menuitem"><a hreflang="bn-IN" href="#bn-IN" property="inLanguage" content="bn">বাংলা</a></li>
+		<li role="menuitem"><a hreflang="ta-IN" href="#ta-IN" property="inLanguage" content="ta">தமிழ்</a></li>
+		<li role="menuitem"><a hreflang="te-IN" href="#te-IN" property="inLanguage" content="te">తెలుగు</a></li>
+		<li role="menuitem"><a hreflang="gu-IN" href="#gu-IN" property="inLanguage" content="gu">ગુજરાતી</a></li>
+		<li role="menuitem"><a hreflang="pa-IN" href="#pa-IN" property="inLanguage" content="pa">ਪੰਜਾਬੀ</a></li>
+		<li role="menuitem"><a hreflang="ur-IN" href="#ur-IN" property="inLanguage" content="ur">اردو</a></li>
+		<li role="menuitem"><a hreflang="or-IN" href="#or-IN" property="inLanguage" content="or">ଓଡ଼ିଆ</a></li>
+		<li role="menuitem"><a hreflang="mr-IN" href="#mr-IN" property="inLanguage" content="mr">मराठी</a></li>
+	</ul>
 </details>
 <a id="ja-JP" hreflang="ja-JP" href="#ja-JP" title="日本語" property="inLanguage" content="ja">🇯🇵</a>
 <a id="es-013" hreflang="es-013" href="#es-013" title="Español" property="inLanguage" content="es">🇪🇸</a>

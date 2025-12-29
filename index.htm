@@ -186,18 +186,12 @@ fieldset{
 fieldset[disabled]{overflow-y:hidden}
 legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex}
 details[ontoggle] {cursor:pointer;display:inline-block}
-details > summary {list-style:none;font-size:3ex;cursor:help}
-details[ontoggle] > a {position:fixed;left:calc(50% - 4ex);top:4ex;background-color:#FFF}
-details[ontoggle] > a:nth-of-type(2) {top:7ex;}
-details[ontoggle] > a:nth-of-type(3) {top:10ex;}
-details[ontoggle] > a:nth-of-type(4) {top:13ex;}
-details[ontoggle] > a:nth-of-type(5) {top:16ex;}
-details[ontoggle] > a:nth-of-type(6) {top:19ex;}
-details[ontoggle] > a:nth-of-type(7) {top:22ex;}
-details[ontoggle] > a:nth-of-type(8) {top:25ex;}
-details[ontoggle] > a:last-of-type {top:28ex;}
-details[ontoggle][open] > a:not(:hover){opacity:0.6}
-details[ontoggle][open] > a:focus-visible{opacity:1}
+details > summary {list-style:none;font-size:18pt;cursor:help}
+details[ontoggle] > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
+details[ontoggle] > ul > li {background-color:#FFF}
+details[ontoggle][open] > ul > li > a:hover,details[ontoggle][open] > ul > li > a:focus-visible{background-color:#CCC}
+details[ontoggle][open] > ul > li:not(:hover)::marker {color:transparent;}
+details[ontoggle][open] > ul > li:hover::marker,details[ontoggle][open] > ul > li:focus-within::marker {color:#FFF;}
 #f,[type="submit"]{font-size:24px}
   </style>
 	<script>
@@ -283,17 +277,19 @@ const faviconHref = emoji =>
 <a id="fr" hreflang="fr" href="#fr" title="Français" property="inLanguage" content="fr">🇫🇷</a>
 <a id="de" hreflang="de" href="#de" title="Deutsch" property="inLanguage" content="de">🇩🇪</a>
 <a id="ru" hreflang="ru" href="#ru" title="русский" property="inLanguage" content="ru">🇷🇺</a>
-<details id="hi-IN" aria-expanded="false" ontoggle="this.setAttribute('aria-expanded',this.open?'true':'false')">
-	<summary title="भारतीय">🇮🇳</summary>
-	<a hreflang="hi-IN" href="#hi-IN" property="inLanguage" content="hi">हिन्दी</a>
-	<a hreflang="bn-IN" href="#bn-IN" property="inLanguage" content="bn">বাংলা</a>
-	<a hreflang="ta-IN" href="#ta-IN" property="inLanguage" content="ta">தமிழ்</a>
-	<a hreflang="te-IN" href="#te-IN" property="inLanguage" content="te">తెలుగు</a>
-	<a hreflang="gu-IN" href="#gu-IN" property="inLanguage" content="gu">ગુજરાતી</a>
-	<a hreflang="pa-IN" href="#pa-IN" property="inLanguage" content="pa">ਪੰਜਾਬੀ</a>
-	<a hreflang="ur-IN" href="#ur-IN" property="inLanguage" content="ur">اردو</a>
-	<a hreflang="or-IN" href="#or-IN" property="inLanguage" content="or">ଓଡ଼ିଆ</a>
-	<a hreflang="mr-IN" href="#mr-IN" property="inLanguage" content="mr">मराठी</a>
+<details id="hi-IN" ontoggle="this.firstElementChild.setAttribute('aria-expanded',this.open?'true':'false')">
+	<summary aria-expanded="false" role="button" aria-haspopup="true" aria-controls="INlangs" aria-label="Indian languages" title="भारतीय भाषाएँ">🇮🇳</summary>
+	<ul role="menu" id="INlangs">
+		<li role="menuitem"><a hreflang="hi-IN" href="#hi-IN" property="inLanguage" content="hi">हिन्दी</a></li>
+		<li role="menuitem"><a hreflang="bn-IN" href="#bn-IN" property="inLanguage" content="bn">বাংলা</a></li>
+		<li role="menuitem"><a hreflang="ta-IN" href="#ta-IN" property="inLanguage" content="ta">தமிழ்</a></li>
+		<li role="menuitem"><a hreflang="te-IN" href="#te-IN" property="inLanguage" content="te">తెలుగు</a></li>
+		<li role="menuitem"><a hreflang="gu-IN" href="#gu-IN" property="inLanguage" content="gu">ગુજરાતી</a></li>
+		<li role="menuitem"><a hreflang="pa-IN" href="#pa-IN" property="inLanguage" content="pa">ਪੰਜਾਬੀ</a></li>
+		<li role="menuitem"><a hreflang="ur-IN" href="#ur-IN" property="inLanguage" content="ur">اردو</a></li>
+		<li role="menuitem"><a hreflang="or-IN" href="#or-IN" property="inLanguage" content="or">ଓଡ଼ିଆ</a></li>
+		<li role="menuitem"><a hreflang="mr-IN" href="#mr-IN" property="inLanguage" content="mr">मराठी</a></li>
+	</ul>
 </details>
 <a id="ja-JP" hreflang="ja-JP" href="#ja-JP" title="日本語" property="inLanguage" content="ja">🇯🇵</a>
 <a id="es-013" hreflang="es-013" href="#es-013" title="Español" property="inLanguage" content="es">🇪🇸</a>
