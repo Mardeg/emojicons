@@ -209,14 +209,16 @@ function choice(L) {
 	H = H?H.substring(1,3):'en';
 	for (o of ['h1','legend']){document.querySelector(o).setAttribute('lang',H)}
 	document.querySelector('legend').setAttribute('data-' + H + 'c',JSON.parse(document.forms[0].elements['c'].value)[H]);
+
     document.querySelector('input[type="submit"]').setAttribute('value',{ru:'Фавикон',hi:'फ़ेविकॉन',bn:'ফেভিকন',ta:'ஃபேவிகான்',te:'ఫేవికాన్',gu:'ફેવિકોન',pa:'ਫੇਵੀਕੋਨ',ur:'فیویکن',or:'ଫାଭିକନ୍',mr:'फेविकॉन',ja:'ファビコン'}[H]||'Favicon');
+
 	document.querySelector('input:checked + label').scrollIntoView({behavior:'smooth', block:'center'});
 	document.querySelector('input[type="text"]').placeholder = document.querySelector('input:checked').id;
 }
 document.onreadystatechange = () => {if(document.readyState === "interactive") {
-    document.querySelector("fieldset").addEventListener("click",() => choice());
+    document.querySelector("form > fieldset").addEventListener("click",() => choice());
     let lh = location.hash;
-    if((lh)&&(lh.at(-1)=="N")){document.querySelector("header > fieldset > details").setAttribute('id',lh.substring(1));location.hash = lh;}
+    if((lh)&&(lh.at(-1)=="N")){document.querySelector("header > fieldset > details").setAttribute("id",lh.substring(1));location.hash = lh;}
     if(!("MozAppearance" in document.documentElement.style)){
     	for (const cb of document.querySelectorAll("details > ul > li > a[hreflang]")) {
 		    cb.href=`javascript:document.querySelector('header > fieldset > details').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
@@ -618,7 +620,6 @@ There is no circular motion</title><style>
 	</a></svg></footer>
 <audio onended="typenext(bt,document.querySelector('#f'),output[tc++],this)"><source src="data:audio/webm;base64,T2dnUwACAAAAAAAAAAA8LIVUAAAAAMUMQoABE09wdXNIZWFkAQJ4AIC7AAAAAABPZ2dTAAAAAAAAAAAAADwshVQBAAAAcZ6uwgE2T3B1c1RhZ3MNAAAATGF2ZjU1LjMzLjEwMAEAAAAVAAAAZW5jb2Rlcj1MYXZmNTUuMzMuMTAwT2dnUwAEBgEAAAAAAAA8LIVUAgAAAJiythACDAygf+pqf4dMZZBaQnOgf/dpvPz/3Kt2ZbU=" type="audio/webm"></audio>
 </body></html>
-
 
 
 
