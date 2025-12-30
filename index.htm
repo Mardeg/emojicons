@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Multilingual site favicon generator using emojis in SVG">
 		<title>Character Selection</title>
-		<link rel="canonical" href="https://emojicons.pages.dev/">
+		<link rel="canonical" href="https://emojicons.pages.dev/index.html">
         <link rel="alternate" href="https://emojicons.pages.dev/#en-GB" hreflang="en">
         <link rel="alternate" href="https://emojicons.pages.dev/#fr" hreflang="fr">
         <link rel="alternate" href="https://emojicons.pages.dev/#de" hreflang="de">
@@ -172,6 +172,13 @@ input[name="c"]:checked + label.paused::before { animation-play-state: paused; }
     75% { content:var(--md); }
     100% { content:var(--d); }
 }
+@keyframes markerGlow {
+    0% { color: #ff0; }
+    25% { color: #ff0; }
+    50% { color: #808; }
+    75% { color: #0ff; }
+    100% { color: #0ff; }
+}
 form > fieldset{
 	display: grid;
 	grid-template: repeat(18, 1fr) / repeat(2, 1fr);
@@ -192,7 +199,7 @@ header > fieldset > details > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
 header > fieldset > details > ul > li {background-color:#FFF}
 header > fieldset > details[open] > ul > li > a:hover,dheader > fieldset > details[open] > ul > li > a:focus-visible{background-color:#CCC}
 header > fieldset > details[open] > ul > li:not(:hover)::marker {color:transparent;}
-header > fieldset > details[open] > ul > li:hover::marker,header > fieldset > details[open] > ul > li:focus-within::marker {color:#FFF;}
+header > fieldset > details[open] > ul > li:hover::marker,header > fieldset > details[open] > ul > li:focus-within::marker {animation: markerGlow 0.5s infinite alternate linear}
 #f,[type="submit"]{font-size:24px}
   </style>
 	<script>
