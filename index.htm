@@ -209,9 +209,7 @@ function choice(L) {
 	H = H?H.substring(1,3):'en';
 	for (o of ['h1','legend']){document.querySelector(o).setAttribute('lang',H)}
 	document.querySelector('legend').setAttribute('data-' + H + 'c',JSON.parse(document.forms[0].elements['c'].value)[H]);
-
     document.querySelector('input[type="submit"]').setAttribute('value',{ru:'Фавикон',hi:'फ़ेविकॉन',bn:'ফেভিকন',ta:'ஃபேவிகான்',te:'ఫేవికాన్',gu:'ફેવિકોન',pa:'ਫੇਵੀਕੋਨ',ur:'فیویکن',or:'ଫାଭିକନ୍',mr:'फेविकॉन',ja:'ファビコン'}[H]||'Favicon');
-
 	document.querySelector('input:checked + label').scrollIntoView({behavior:'smooth', block:'center'});
 	document.querySelector('input[type="text"]').placeholder = document.querySelector('input:checked').id;
 }
@@ -227,7 +225,7 @@ document.onreadystatechange = () => {if(document.readyState === "interactive") {
     }
   }
 }
-function refocus() {
+function refocus(n) {
 	var a = document.querySelector('a[autofocus]'),
 	b = location.hash;
 	if(a && b){
@@ -239,6 +237,7 @@ function refocus() {
 	};
 	document.querySelector('input:checked').focus();
 	choice(b?b:'#en-GB');
+    if(n)document.querySelector('a[accesskey="c"]').focus();
 }
 function current(lh) {
   let l = lh.substring(1,3), d = document.querySelector('header > fieldset > details');
@@ -265,6 +264,7 @@ function typenext(bt,q,p,t) {
 		document.querySelector("#f").setAttribute("aria-busy","false");
 		let linkForFavicon = document.querySelector('head > link[rel="icon"]');
 		linkForFavicon.setAttribute("href", "data:image/svg+xml;charset=utf-8;base64," + bt);
+        document.querySelector('a[accesskey="c"]').focus();
 	}
 }
 async function playAudio(a) {
@@ -288,8 +288,8 @@ const faviconHref = emoji =>
 // @license-end
 	</script>
 </head>
-<body onload="document.querySelector('input[type=text]').value = '';refocus();" onhashchange="current(location.hash)">
-<header><fieldset aria-label="Multilingual" role="radiogroup" vocab="http://schema.org" typeof="CommunicateAction">
+<body onload="document.querySelector('input[type=text]').value = '';refocus();" onhashchange="current(location.hash)" vocab="http://schema.org" typeof="CommunicateAction">
+<header><fieldset aria-label="Multilingual" role="radiogroup">
 <a id="en-GB" hreflang="en-GB" href="#en-GB" role="radio" aria-checked="true" title="English" autofocus aria-current="page" property="inLanguage" content="en">🇬🇧</a>
 <a id="fr" hreflang="fr" href="#fr" role="radio" aria-checked="false" title="Français" property="inLanguage" content="fr">🇫🇷</a>
 <a id="de" hreflang="de" href="#de" role="radio" aria-checked="false" title="Deutsch" property="inLanguage" content="de">🇩🇪</a>
@@ -393,7 +393,7 @@ data-enc="Sorceror"
 <input type="radio" name="c" id="🧘" value='{"en":"Guru", "fr":"Gourou", "de":"Guru", "ru":"Гуру", "hi":"गुरु", "bn":"গুরু", "ta":"குரு", "te":"గురువు", "gu":"ગુરુ", "pa":"ਗੁਰੂ", "ur":"گرو", "or":"ଗୁରୁ", "mr":"गुरु", "ja":"達人", "es":"Gurú", "it":"Guru", "nl":"Goeroe", "sv":"Guru"}'><label for="🧘">&#8203;</label>
 </fieldset><label><a href="https://emojipedia.org/" target="_blank" aria-label="Opens in new tab">&#8203;</a>: <input type="text" size="1" maxLength="7"
 onfocus="for(p of document.querySelectorAll('input[name=c] + label')){p.classList.add('paused');}document.querySelector('legend').classList.add('custom');this.parentNode.previousSibling.toggleAttribute('disabled')"
-onblur="if(!this.value){for(p of document.querySelectorAll('input[name=c] + label[class=paused]')){p.classList.remove('paused')};document.querySelector('legend[class=custom]').classList.remove('custom');this.parentNode.previousSibling.removeAttribute('disabled');refocus()}"
+onblur="if(!this.value){for(p of document.querySelectorAll('input[name=c] + label[class=paused]')){p.classList.remove('paused')};document.querySelector('legend[class=custom]').classList.remove('custom');this.parentNode.previousSibling.removeAttribute('disabled');refocus(n)}"
 title="📋" aria-label="Encode this"></label><br>
 <label for="f" style="font-size:24px"><a href="javascript:void(navigator.clipboard.writeText(document.querySelector('#f').value))" accesskey="c" title="[Alt][Shift]C then [Enter]" role="button">📋</a></label><input type="text" id="f" readonly aria-live="polite" aria-busy="false">&nbsp;<input type="submit" value="Favicon"></form></main><footer>
 <svg xmlns="http://www.w3.org/2000/svg" width="187" height="66" viewBox="0 0 255 90" role="img"><title>The source code of this page is free to
@@ -620,7 +620,6 @@ There is no circular motion</title><style>
 	</a></svg></footer>
 <audio onended="typenext(bt,document.querySelector('#f'),output[tc++],this)"><source src="data:audio/webm;base64,T2dnUwACAAAAAAAAAAA8LIVUAAAAAMUMQoABE09wdXNIZWFkAQJ4AIC7AAAAAABPZ2dTAAAAAAAAAAAAADwshVQBAAAAcZ6uwgE2T3B1c1RhZ3MNAAAATGF2ZjU1LjMzLjEwMAEAAAAVAAAAZW5jb2Rlcj1MYXZmNTUuMzMuMTAwT2dnUwAEBgEAAAAAAAA8LIVUAgAAAJiythACDAygf+pqf4dMZZBaQnOgf/dpvPz/3Kt2ZbU=" type="audio/webm"></audio>
 </body></html>
-
 
 
 
