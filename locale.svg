@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 500 1000">
+<svg xmlns="http://www.w3.org/2000/svg" version="2" viewBox="0 0 510 1000">
 <style>
 /* <![CDATA[ */
 svg{width:100vw;height:100vh;background-color:#CCC}
-iframe{width:500px;height:1000px;border:0}
+iframe{width:510px;height:1000px;border:0}
 /* ]]> */
 </style>
   <switch>
