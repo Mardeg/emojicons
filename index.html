@@ -7,13 +7,12 @@
 		<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Security-Policy" content="base-uri 'self'; form-action javascript:; object-src 'none'; media-src 'self' data:; img-src 'self' data:; child-src blob: https://web.archive.org; connect-src 'self' blob: data:">
-        <link rel="alternate" href="https://emojicons.pages.dev/" hreflang="x-default">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Multilingual site favicon generator using emojis in SVG">
 		<title>Character Selection</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="canonical" href="https://emojicons.pages.dev/">
+		<link rel="canonical" href="https://emojicons.pages.dev/index.html">
         <link rel="alternate" href="https://emojicons.pages.dev/#en-GB" hreflang="en">
         <link rel="alternate" href="https://emojicons.pages.dev/#fr" hreflang="fr">
         <link rel="alternate" href="https://emojicons.pages.dev/#de" hreflang="de">
@@ -47,11 +46,12 @@ function choice(L) {
 document.onreadystatechange = () => {if(document.readyState === "interactive") {
     document.querySelector("fieldset").addEventListener("click",() => choice());
     let lh = location.hash;
-    if((lh)&&(lh.at(-1)=="N")){document.querySelector("details[ontoggle]").setAttribute('id',lh.substring(1));location.hash = lh}
+    if((lh)&&(lh.at(-1)=="N")){document.querySelector("header > fieldset > details").setAttribute('id',lh.substring(1));location.hash = lh;}
     if(!("MozAppearance" in document.documentElement.style)){
-    	for (const cb of document.querySelectorAll("details > a[hreflang]")) {
-		    cb.href=`javascript:document.querySelector('details[ontoggle]').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
+    	for (const cb of document.querySelectorAll("details > ul > li > a[hreflang]")) {
+		    cb.href=`javascript:document.querySelector('header > fieldset > details').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
       }
+    if (lh) current(lh);
     }
   }
 }
@@ -69,10 +69,14 @@ function refocus() {
 	choice(b?b:'#en-GB');
 }
 function current(lh) {
-  let l = lh.substring(1,3), d = document.querySelector('details[ontoggle]');
+  let l = lh.substring(1,3), d = document.querySelector('header > fieldset > details');
   if(("MozAppearance" in document.documentElement.style)&&(lh.at(-1)=="N"))d.setAttribute('id',lh.substring(1));
-  document.querySelector("[aria-current]").removeAttribute("aria-current");
-  document.querySelector('[id^="'+ l +'"]').setAttribute("aria-current","page");
+  let ac = document.querySelector("[aria-current]");
+  ac.removeAttribute("aria-current");
+  ac.setAttribute("aria-checked","false")
+  ac = document.querySelector('[content="'+ l +'"]');
+  ac.setAttribute("aria-checked","true")
+  ac.setAttribute("aria-current","page");
   d.removeAttribute("open");
   refocus();
   if(("MozAppearance" in document.documentElement.style)&&(lh.at(-1)=="N"))location.hash = lh;
@@ -114,30 +118,31 @@ const faviconHref = emoji =>
 </head>
 <body onload="document.querySelector('input[type=text]').value = '';refocus();" onhashchange="current(location.hash)" vocab="http://schema.org" typeof="CommunicateAction">
 <noscript>Please enable Javascript.<br></noscript>
-<a id="en-GB" hreflang="en-GB" href="#en-GB" title="English" autofocus aria-current="page" property="inLanguage" content="en">🇬🇧</a>
-<a id="fr" hreflang="fr" href="#fr" title="Français" property="inLanguage" content="fr">🇫🇷</a>
-<a id="de" hreflang="de" href="#de" title="Deutsch" property="inLanguage" content="de">🇩🇪</a>
-<a id="ru" hreflang="ru" href="#ru" title="русский" property="inLanguage" content="ru">🇷🇺</a>
-<details id="hi-IN" ontoggle="this.firstElementChild.setAttribute('aria-expanded',this.open?'true':'false')">
-	<summary aria-expanded="false" role="button" aria-haspopup="true" aria-controls="INlangs" aria-label="Indian languages" title="भारतीय भाषाएँ">🇮🇳</summary>
+<header><fieldset aria-label="Multilingual" role="radiogroup">
+<a id="en-GB" hreflang="en-GB" href="#en-GB" role="radio" aria-checked="true" title="English" autofocus aria-current="page" property="inLanguage" content="en">🇬🇧</a>
+<a id="fr" hreflang="fr" href="#fr" role="radio" aria-checked="false" title="Français" property="inLanguage" content="fr">🇫🇷</a>
+<a id="de" hreflang="de" href="#de" role="radio" aria-checked="false" title="Deutsch" property="inLanguage" content="de">🇩🇪</a>
+<a id="ru" hreflang="ru" href="#ru" role="radio" aria-checked="false" title="русский" property="inLanguage" content="ru">🇷🇺</a>
+<details id="hi-IN">
+	<summary aria-haspopup="true" aria-controls="INlangs" aria-label="Indian languages" title="भारतीय भाषाएँ">🇮🇳</summary>
 	<ul role="menu" id="INlangs">
-		<li role="menuitem"><a hreflang="hi-IN" href="#hi-IN" property="inLanguage" content="hi">हिन्दी</a></li>
-		<li role="menuitem"><a hreflang="bn-IN" href="#bn-IN" property="inLanguage" content="bn">বাংলা</a></li>
-		<li role="menuitem"><a hreflang="ta-IN" href="#ta-IN" property="inLanguage" content="ta">தமிழ்</a></li>
-		<li role="menuitem"><a hreflang="te-IN" href="#te-IN" property="inLanguage" content="te">తెలుగు</a></li>
-		<li role="menuitem"><a hreflang="gu-IN" href="#gu-IN" property="inLanguage" content="gu">ગુજરાતી</a></li>
-		<li role="menuitem"><a hreflang="pa-IN" href="#pa-IN" property="inLanguage" content="pa">ਪੰਜਾਬੀ</a></li>
-		<li role="menuitem"><a hreflang="ur-IN" href="#ur-IN" property="inLanguage" content="ur">اردو</a></li>
-		<li role="menuitem"><a hreflang="or-IN" href="#or-IN" property="inLanguage" content="or">ଓଡ଼ିଆ</a></li>
-		<li role="menuitem"><a hreflang="mr-IN" href="#mr-IN" property="inLanguage" content="mr">मराठी</a></li>
+		<li role="menuitem"><a hreflang="hi-IN" href="#hi-IN" role="radio" aria-checked="false" aria-label="Hindi language" property="inLanguage" content="hi">हिन्दी</a></li>
+		<li role="menuitem"><a hreflang="bn-IN" href="#bn-IN" role="radio" aria-checked="false" aria-label="Bengali language" property="inLanguage" content="bn">বাংলা</a></li>
+		<li role="menuitem"><a hreflang="ta-IN" href="#ta-IN" role="radio" aria-checked="false" aria-label="Tamil language" property="inLanguage" content="ta">தமிழ்</a></li>
+		<li role="menuitem"><a hreflang="te-IN" href="#te-IN" role="radio" aria-checked="false" aria-label="Telugu language" property="inLanguage" content="te">తెలుగు</a></li>
+		<li role="menuitem"><a hreflang="gu-IN" href="#gu-IN" role="radio" aria-checked="false" aria-label="Gujarati language" property="inLanguage" content="gu">ગુજરાતી</a></li>
+		<li role="menuitem"><a hreflang="pa-IN" href="#pa-IN" role="radio" aria-checked="false" aria-label="Punjabi language" property="inLanguage" content="pa">ਪੰਜਾਬੀ</a></li>
+		<li role="menuitem"><a hreflang="ur-IN" href="#ur-IN" role="radio" aria-checked="false" aria-label="Urdu language" property="inLanguage" content="ur">اردو</a></li>
+		<li role="menuitem"><a hreflang="or-IN" href="#or-IN" role="radio" aria-checked="false" aria-label="Odia language" property="inLanguage" content="or">ଓଡ଼ିଆ</a></li>
+		<li role="menuitem"><a hreflang="mr-IN" href="#mr-IN" role="radio" aria-checked="false" aria-label="Marathi language" property="inLanguage" content="mr">मराठी</a></li>
 	</ul>
 </details>
-<a id="ja-JP" hreflang="ja-JP" href="#ja-JP" title="日本語" property="inLanguage" content="ja">🇯🇵</a>
-<a id="es-013" hreflang="es-013" href="#es-013" title="Español" property="inLanguage" content="es">🇪🇸</a>
-<a id="it" hreflang="it" href="#it" title="Italian" property="inLanguage" content="it">🇮🇹</a>
-<a id="nl" hreflang="nl" href="#nl" title="Nederlands" property="inLanguage" content="nl">🇳🇱</a>
-<a id="sv-SE" hreflang="sv-SE" href="#sv-SE" title="Svenska" property="inLanguage" content="sv">🇸🇪</a>
-<main aria-label="Multilingual"><h1 lang="en"
+<a id="ja-JP" hreflang="ja-JP" href="#ja-JP" role="radio" aria-checked="false" title="日本語" property="inLanguage" content="ja">🇯🇵</a>
+<a id="es-013" hreflang="es-013" href="#es-013" role="radio" aria-checked="false" title="Español" property="inLanguage" content="es">🇪🇸</a>
+<a id="it" hreflang="it" href="#it" role="radio" aria-checked="false" title="Italian" property="inLanguage" content="it">🇮🇹</a>
+<a id="nl" hreflang="nl" href="#nl" role="radio" aria-checked="false" title="Nederlands" property="inLanguage" content="nl">🇳🇱</a>
+<a id="sv-SE" hreflang="sv-SE" href="#sv-SE" role="radio" aria-checked="false" title="Svenska" property="inLanguage" content="sv">🇸🇪</a>
+</fieldset></header><main><h1 lang="en"
 data-en="Your Character&nbsp;"
 data-fr="Ton Caractère&nbsp;"
 data-de="Dein Charakter&nbsp;"
@@ -219,10 +224,11 @@ data-enc="Sorceror"
 onfocus="for(p of document.querySelectorAll('input[name=c] + label')){p.classList.add('paused');}document.querySelector('legend').classList.add('custom');this.parentNode.previousSibling.toggleAttribute('disabled')"
 onblur="if(!this.value){for(p of document.querySelectorAll('input[name=c] + label[class=paused]')){p.classList.remove('paused')};document.querySelector('legend[class=custom]').classList.remove('custom');this.parentNode.previousSibling.removeAttribute('disabled');refocus()}"
 title="📋" aria-label="Encode this"></label><br>
-<label for="f" style="font-size:24px"><a href="javascript:void(navigator.clipboard.writeText(document.querySelector('#f').value))" accesskey="c" title="[Alt][Shift]C then [Enter]" role="button">📋</a></label><input type="text" id="f" readonly aria-live="polite" aria-busy="false">&nbsp;<input type="submit" value="Favicon"></form></main>
+<label for="f" style="font-size:24px"><a href="javascript:void(navigator.clipboard.writeText(document.querySelector('#f').value))" accesskey="c" title="[Alt][Shift]C then [Enter]" role="button">📋</a></label><input type="text" id="f" readonly aria-live="polite" aria-busy="false">&nbsp;<input type="submit" value="Favicon"></form></main><footer>
 <svg xmlns="http://www.w3.org/2000/svg" width="187" height="66" viewBox="0 0 255 90" role="img"><title>The source code of this page is free to
 copy/use without permission/attribution</title>
-<a href="https://creativecommons.org/publicdomain/zero/1.0/" aria-label="The source code of this page is free to copy/use without permission/attribution">
+<a href="https://creativecommons.org/publicdomain/zero/1.0/" aria-label="The source code of this page is free to
+copy/use without permission/attribution">
 <rect x="1" y="1" width="253" height="87" rx="4" ry="4" stroke-width="2" stroke="#000000" fill="#aab2ab"/>
 <rect x="0" y="63" width="255" height="26" stroke="none" fill="#000000"/>
 <circle cx="44" cy="42" r="40.1" stroke="none" fill="#aab2ab"/>
@@ -440,19 +446,7 @@ There is no circular motion</title><style>
    id="polygon3365"
    points="410.389,107.594 425.28,93.068 453.924,121.711 527.717,47.918 538.843,58.063 455.865,140.166 410.389,107.594 " />
 					</g>
-	</a></svg>
+	</a></svg></footer>
 <audio onended="typenext(bt,document.querySelector('#f'),output[tc++],this)"><source src="data:audio/webm;base64,T2dnUwACAAAAAAAAAAA8LIVUAAAAAMUMQoABE09wdXNIZWFkAQJ4AIC7AAAAAABPZ2dTAAAAAAAAAAAAADwshVQBAAAAcZ6uwgE2T3B1c1RhZ3MNAAAATGF2ZjU1LjMzLjEwMAEAAAAVAAAAZW5jb2Rlcj1MYXZmNTUuMzMuMTAwT2dnUwAEBgEAAAAAAAA8LIVUAgAAAJiythACDAygf+pqf4dMZZBaQnOgf/dpvPz/3Kt2ZbU=" type="audio/webm"></audio>
 </body></html>
-
-
-
-
-
-
-
-
-
-
-
-
 

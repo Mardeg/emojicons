@@ -42,43 +42,44 @@ legend:lang(nl)::after {content: attr(data-nlc)}
 legend:lang(sv)::after {content: attr(data-svc)}
 h1:lang(en) + form > fieldset + label > a::before,
 legend.custom:lang(en)::after {content: "Custom Emoji"}
-#fr:target ~ main > form > fieldset + label > a::before,
+header > fieldset {border-style: none;}
+header:has(#fr:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(fr)::after {content:"Emoji Personnalisé"}
-#de:target ~ main > form > fieldset + label > a::before,
+header:has(#de:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(de)::after {content: "Benutzerdefiniertes Emoji"}
-#ru:target ~ main > form > fieldset + label > a::before,
+header:has(#ru:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(ru)::after {content: "Пользовательские эмодзи"}
-#hi-IN:target ~ main > form > fieldset + label > a::before,
+header:has(#hi-IN:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(hi)::after {content: "कस्टम इमोजी"}
-#bn-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="bn"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(bn)::after {content: "কাস্টম ইমোজি"}
-#ta-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="ta"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(ta)::after {content: "தனிப்பயன் ஈமோஜி"}
-#te-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="te"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(te)::after {content: "అనుకూల ఎమోజి"}
-#gu-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="gu"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(gu)::after {content: "કસ્ટમ ઇમોજી"}
-#pa-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="pa"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(pa)::after {content: "ਵਿਉਂਤਬੱਧ ਇਮੋਜੀ"}
-#mr-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="mr"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(mr)::after {content: "कस्टम इमोजी"}
-#ur-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="ur"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(ur)::after {content: "حسب ضرورت ایموجی"}
-#or-IN:target ~ main > form > fieldset + label > a::before,
+header:has([aria-checked="true"][content="or"]) + main > form > fieldset + label > a::before,
 legend.custom:lang(or)::after {content: "କଷ୍ଟମ୍ ଇମୋଜି"}
-#ja-JP:target ~ main > form > fieldset + label > a::before,
+header:has(#ja-JP:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(ja)::after {content: "カスタム絵文字"}
-#es-013:target ~ main > form > fieldset + label > a::before,
+header:has(#es-013:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(es)::after {content: "Emoji Personalizado"}
-#it:target ~ main > form > fieldset + label > a::before,
+header:has(#it:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(it)::after {content: "Emoji Personalizzati"}
-#nl:target ~ main > form > fieldset + label > a::before,
+header:has(#nl:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(nl)::after {content: "Aangepaste Emoji"}
-#sv-SE:target ~ main > form > fieldset + label > a::before,
+header:has(#sv-SE:target) + main > form > fieldset + label > a::before,
 legend.custom:lang(sv)::after {content: "Anpassad Emoji"}
 form {padding-bottom:1ex}
 a[id] {text-decoration:none;font-size:3ex;}
-a[id]:not(:target),details[ontoggle]:not(:target):not([open]) {opacity:0.6}
+a[id]:not(:target),header > fieldset > details:not(:target):not([open]) {opacity:0.6}
 a[id][autofocus] {opacity:1}
 a:not(:hover) {text-decoration:none}
 a:focus-visible {text-decoration:underline}
@@ -91,7 +92,7 @@ input[name="c"]{
 	margin: -1px; padding: 0; border: 0;
 }
 label{font-size:12ex;cursor:pointer}
-fieldset + label {font-size: medium}
+form > fieldset + label {font-size: medium}
 input[size="1"] {font-size:4ex}
 input[name="c"] + label::before{content:attr(for);will-change:content}
 input[name="c"]:checked + label::before{animation: glow 0.25s linear infinite alternate}
@@ -139,7 +140,14 @@ input[name="c"]:checked + label.paused::before { animation-play-state: paused; }
     75% { content:var(--md); }
     100% { content:var(--d); }
 }
-fieldset{
+@keyframes markerGlow {
+    0% { color: #ff0; }
+    25% { color: #ff0; }
+    50% { color: #808; }
+    75% { color: #0ff; }
+    100% { color: #0ff; }
+}
+form > fieldset{
 	display: grid;
 	grid-template: repeat(18, 1fr) / repeat(2, 1fr);
 	grid-auto-flow: column;
@@ -151,13 +159,13 @@ fieldset{
   color:#FFF;
 	overflow-y:scroll;
 }
-fieldset[disabled]{overflow-y:hidden}
+form > fieldset[disabled]{overflow-y:hidden}
 legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex}
-details[ontoggle] {cursor:pointer;display:inline-block}
-details > summary {list-style:none;font-size:18pt;cursor:help}
-details[ontoggle] > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
-details[ontoggle] > ul > li {background-color:#FFF}
-details[ontoggle][open] > ul > li > a:hover,details[ontoggle][open] > ul > li > a:focus-visible{background-color:#CCC}
-details[ontoggle][open] > ul > li:not(:hover)::marker {color:transparent;}
-details[ontoggle][open] > ul > li:hover::marker,details[ontoggle][open] > ul > li:focus-within::marker {color:#FFF;}
+header > fieldset > details {cursor:pointer;display:inline-block}
+header > fieldset > details > summary {list-style:none;font-size:18pt;cursor:help}
+header > fieldset > details > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
+header > fieldset > details > ul > li {background-color:#FFF}
+header > fieldset > details[open] > ul > li > a:hover,dheader > fieldset > details[open] > ul > li > a:focus-visible{background-color:#CCC}
+header > fieldset > details[open] > ul > li:not(:hover)::marker {color:transparent;}
+header > fieldset > details[open] > ul > li:hover::marker,header > fieldset > details[open] > ul > li:focus-within::marker {animation: markerGlow 0.5s infinite alternate linear}
 #f,[type="submit"]{font-size:24px}
