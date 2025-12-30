@@ -52,8 +52,9 @@ document.onreadystatechange = () => {if(document.readyState === "interactive") {
     	for (const cb of document.querySelectorAll("details > ul > li > a[hreflang]")) {
 		    cb.href=`javascript:document.querySelector('header > fieldset > details').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
       }
-    if (lh) current(lh);
     }
+    document.querySelector(a[role="button"]).setAttribute("accesskey","c");
+    if (lh) current(lh);
   }
 }
 function refocus(n) {
@@ -219,7 +220,7 @@ data-enc="Sorceror"
 onfocus="for(p of document.querySelectorAll('input[name=c] + label')){p.classList.add('paused');}document.querySelector('form > fieldset > legend').classList.add('custom');this.parentNode.previousSibling.toggleAttribute('disabled')"
 onblur="if(!this.value){for(p of document.querySelectorAll('input[name=c] + label[class=paused]')){p.classList.remove('paused')};document.querySelector('legend[class=custom]').classList.remove('custom');this.parentNode.previousSibling.removeAttribute('disabled');refocus('next')}"
 title="📋" aria-label="Encode this"></label><br>
-<label for="f" style="font-size:24px"><a href="javascript:void(navigator.clipboard.writeText(document.querySelector('#f').value))" accesskey="c" title="[Alt][Shift]C then [Enter]" role="button">📋</a></label><input type="text" id="f" readonly aria-live="polite" aria-busy="false">&nbsp;<input type="submit" value="Favicon"></form></main><footer>
+<label for="f" style="font-size:24px"><a href="javascript:void(navigator.clipboard.writeText(document.querySelector('#f').value))" title="[Alt][Shift]C then [Enter]" role="button">📋</a></label><input type="text" id="f" readonly aria-live="polite" aria-busy="false">&nbsp;<input type="submit" value="Favicon"></form></main><footer>
 <svg xmlns="http://www.w3.org/2000/svg" width="187" height="66" viewBox="0 0 255 90" role="img"><title>The source code of this page is free to
 copy/use without permission/attribution</title>
 <a href="https://creativecommons.org/publicdomain/zero/1.0/" aria-label="The source code of this page is free to
