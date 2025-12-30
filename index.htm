@@ -186,13 +186,13 @@ form > fieldset{
 }
 form > fieldset[disabled]{overflow-y:hidden}
 legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex}
-details[ontoggle] {cursor:pointer;display:inline-block}
-details > summary {list-style:none;font-size:18pt;cursor:help}
-details[ontoggle] > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
-details[ontoggle] > ul > li {background-color:#FFF}
-details[ontoggle][open] > ul > li > a:hover,details[ontoggle][open] > ul > li > a:focus-visible{background-color:#CCC}
-details[ontoggle][open] > ul > li:not(:hover)::marker {color:transparent;}
-details[ontoggle][open] > ul > li:hover::marker,details[ontoggle][open] > ul > li:focus-within::marker {color:#FFF;}
+header > fieldset > details {cursor:pointer;display:inline-block}
+header > fieldset > details > summary {list-style:none;font-size:18pt;cursor:help}
+header > fieldset > details > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
+header > fieldset > details > ul > li {background-color:#FFF}
+header > fieldset > details[open] > ul > li > a:hover,details[ontoggle][open] > ul > li > a:focus-visible{background-color:#CCC}
+header > fieldset > details[open] > ul > li:not(:hover)::marker {color:transparent;}
+header > fieldset > details[open] > ul > li:hover::marker,details[ontoggle][open] > ul > li:focus-within::marker {color:#FFF;}
 #f,[type="submit"]{font-size:24px}
   </style>
 	<script>
@@ -610,7 +610,6 @@ There is no circular motion</title><style>
 	</a></svg></footer>
 <audio onended="typenext(bt,document.querySelector('#f'),output[tc++],this)"><source src="data:audio/webm;base64,T2dnUwACAAAAAAAAAAA8LIVUAAAAAMUMQoABE09wdXNIZWFkAQJ4AIC7AAAAAABPZ2dTAAAAAAAAAAAAADwshVQBAAAAcZ6uwgE2T3B1c1RhZ3MNAAAATGF2ZjU1LjMzLjEwMAEAAAAVAAAAZW5jb2Rlcj1MYXZmNTUuMzMuMTAwT2dnUwAEBgEAAAAAAAA8LIVUAgAAAJiythACDAygf+pqf4dMZZBaQnOgf/dpvPz/3Kt2ZbU=" type="audio/webm"></audio>
 </body></html>
-
 
 
 
