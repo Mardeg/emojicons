@@ -2,7 +2,15 @@
 /*
   Strict-Transport-Security: max-age=63072000; includeSubdomains
   Permissions-Policy: interest-cohort=(), accelerometer=(), ambient-light-sensor=(), battery=(), bluetooth=(), browsing-topics=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), serial=(), storage-access=(), sync-xhr=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()
-  Content-Security-Policy: media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:;
+  Content-Security-Policy: frame-ancestors 'none'; frame-src 'none'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'self'; style-src-attr 'unsafe inline'; script-src 'sha512-U9oRb9CiAF9Mexn1oYwIREoSSJY1IIVoTHxlIhoOkGk5LONF3pulcTSxhxgdau+R3y6in/5v4UWwuwHR6fateg=='; script-src-attr 'unsafe inline';
+
+/index.htm
+  ! Content-Security-Policy
+  Content-Security-Policy: frame-ancestors 'self'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'sha512-jFWamuFRJaiknxlCttLw01nIqxQ/m7LOd/eOm2/66rkK2HsrVxad7dknrO+0hh7pbcHLcA8mRjKfmQ7YNYeyyQ=='; style-src-attr 'unsafe inline'; script-src 'sha512-U9oRb9CiAF9Mexn1oYwIREoSSJY1IIVoTHxlIhoOkGk5LONF3pulcTSxhxgdau+R3y6in/5v4UWwuwHR6fateg=='; script-src-attr 'unsafe inline';
+  
+/locale.svg
+  ! Content-Security-Policy
+  Content-Security-Policy: frame-src 'self';
 
 /*.svgz
   Content-Encoding: gzip
