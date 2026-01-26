@@ -14,22 +14,22 @@
 		<link rel="canonical" href="https://emojicons.pages.dev/index.html">
         <link rel="alternate" href="https://emojicons.pages.dev/#en-GB" hreflang="en">
         <link rel="alternate" href="https://emojicons.pages.dev/#fr" hreflang="fr">
-        <link rel="alternate" href="https://emojicons.pages.dev/#de" hreflang="de">
-        <link rel="alternate" href="https://emojicons.pages.dev/#ru" hreflang="ru">
+        <link rel="alternate" href="https://emojicons.pages.dev/#de" hreflang="de" data-z="NULL">
+        <link rel="alternate" href="https://emojicons.pages.dev/#ru" hreflang="ru" data-z="НОЛЬ">
         <link rel="alternate" href="https://emojicons.pages.dev/#it" hreflang="it">
-        <link rel="alternate" href="https://emojicons.pages.dev/#nl" hreflang="nl">
-        <link rel="alternate" href="https://emojicons.pages.dev/#es-013" hreflang="es">
-        <link rel="alternate" href="https://emojicons.pages.dev/#ja-JP" hreflang="ja">
-        <link rel="alternate" href="https://emojicons.pages.dev/#sv-SE" hreflang="sv">
-        <link rel="alternate" href="https://emojicons.pages.dev/#hi-IN" hreflang="hi">
-        <link rel="alternate" href="https://emojicons.pages.dev/#bn-IN" hreflang="bn">
-        <link rel="alternate" href="https://emojicons.pages.dev/#ta-IN" hreflang="ta">
-        <link rel="alternate" href="https://emojicons.pages.dev/#te-IN" hreflang="te">
-        <link rel="alternate" href="https://emojicons.pages.dev/#gu-IN" hreflang="gu">
-        <link rel="alternate" href="https://emojicons.pages.dev/#pa-IN" hreflang="pa">
-        <link rel="alternate" href="https://emojicons.pages.dev/#ur-IN" hreflang="ur">
-        <link rel="alternate" href="https://emojicons.pages.dev/#or-IN" hreflang="or">
-        <link rel="alternate" href="https://emojicons.pages.dev/#mr-IN" hreflang="mr">
+        <link rel="alternate" href="https://emojicons.pages.dev/#nl" hreflang="nl" data-z="NUL">
+        <link rel="alternate" href="https://emojicons.pages.dev/#es-013" hreflang="es" data-z="CERO">
+        <link rel="alternate" href="https://emojicons.pages.dev/#ja-JP" hreflang="ja" data-z="ゼロ">
+        <link rel="alternate" href="https://emojicons.pages.dev/#sv-SE" hreflang="sv" data-z="NOLL">
+        <link rel="alternate" href="https://emojicons.pages.dev/#hi-IN" hreflang="hi" data-z="शून्य">
+        <link rel="alternate" href="https://emojicons.pages.dev/#bn-IN" hreflang="bn" data-z="শূন্য">
+        <link rel="alternate" href="https://emojicons.pages.dev/#ta-IN" hreflang="ta" data-z="பூஜ்யம்">
+        <link rel="alternate" href="https://emojicons.pages.dev/#te-IN" hreflang="te" data-z="జీరో">
+        <link rel="alternate" href="https://emojicons.pages.dev/#gu-IN" hreflang="gu" data-z="શૂન્ય">
+        <link rel="alternate" href="https://emojicons.pages.dev/#pa-IN" hreflang="pa" data-z="ਜ਼ੀਰੋ">
+        <link rel="alternate" href="https://emojicons.pages.dev/#ur-IN" hreflang="ur" data-z="صفر">
+        <link rel="alternate" href="https://emojicons.pages.dev/#or-IN" hreflang="or" data-z="ଶୂନ୍ୟ">
+        <link rel="alternate" href="https://emojicons.pages.dev/#mr-IN" hreflang="mr" data-z="शून्य">
         <link rel="alternate" href="https://emojicons.pages.dev/" hreflang="x-default">
 		<link rel="icon" href="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxzdHlsZT5zdmd7d2lkdGg6MTAwdnc7aGVpZ2h0OjEwMHZofTwvc3R5bGU+PHRleHQgeD0iNTAlIiB5PSI0NyUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9Ijg0dmgiPvCfpKA8L3RleHQ+PC9zdmc+">
   <style>
@@ -219,6 +219,7 @@ function choice(L) {
 	for (o of ['h1','form > fieldset > legend']){document.querySelector(o).setAttribute('lang',H)}
 	document.querySelector('form > fieldset > legend').setAttribute('data-' + H + 'c',JSON.parse(document.forms[0].elements['c'].value)[H]);
     document.querySelector('input[type="submit"]').setAttribute('value',{ru:'Фавикон',hi:'फ़ेविकॉन',bn:'ফেভিকন',ta:'ஃபேவிகான்',te:'ఫేవికాన్',gu:'ફેવિકોન',pa:'ਫੇਵੀਕੋਨ',ur:'فیویکن',or:'ଫାଭିକନ୍',mr:'फेविकॉन',ja:'ファビコン'}[H]||'Favicon');
+	document.querySelector('svg > a > text[fill="#FFFFFF"]').textContent = document.querySelector('link[href*="#' + H + '"]').dataset.z || "ZERO";
 	document.querySelector('input:checked + label').scrollIntoView({behavior:'smooth', block:'center'});
 	document.querySelector('input[type="text"]').placeholder = document.querySelector('input:checked').id;
 }
