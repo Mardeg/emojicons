@@ -110,7 +110,7 @@ input[name="c"]:checked + label.paused::before { animation-play-state: paused; }
 [id="👨‍🍳"]:checked + label::before{--l:"👨🏻‍🍳";--ml:"👨🏼‍🍳";--m:"👨🏽‍🍳";--md:"👨🏾‍🍳";--d:"👨🏿‍🍳"}
 [id="👨‍🔧"]:checked + label::before{--l:"👨🏻‍🔧";--ml:"👨🏼‍🔧";--m:"👨🏽‍🔧";--md:"👨🏾‍🔧";--d:"👨🏿‍🔧"}
 [id="👨‍🏭"]:checked + label::before{--l:"👨🏻‍🏭";--ml:"👨🏼‍🏭";--m:"👨🏽‍🏭";--md:"👨🏾‍🏭";--d:"👨🏿‍🏭"}
-[id="👨‍💼"]:checked + label::before{--l:"👨🏻‍💼";--ml:"👨🏼‍💼";--m:"👨🏽‍💼";--md:"👨🏾‍💼";--d:"👨🏿‍💼"}
+[id="🧛"]:checked + label::before{--l:"🧛🏻";--ml:"🧛🏼";--m:"🧛🏽";--md:"🧛🏾";--d:"🧛🏿"}
 [id="👨‍🔬"]:checked + label::before{--l:"👨🏻‍🔬";--ml:"👨🏼‍🔬";--m:"👨🏽‍🔬";--md:"👨🏾‍🔬";--d:"👨🏿‍🔬"}
 [id="👨‍✈️"]:checked + label::before{--l:"👨🏻‍✈️";--ml:"👨🏼‍✈️";--m:"👨🏽‍✈️";--md:"👨🏾‍✈️";--d:"👨🏿‍✈️"}
 [id="🕵️‍♂️"]:checked + label::before{--l:"🕵🏻‍♂️";--ml:"🕵🏼‍♂️";--m:"🕵🏽‍♂️";--md:"🕵🏾‍♂️";--d:"🕵🏿‍♂️"}
@@ -128,7 +128,7 @@ input[name="c"]:checked + label.paused::before { animation-play-state: paused; }
 [id="👩‍🍳"]:checked + label::before{--l:"👩🏻‍🍳";--ml:"👩🏼‍🍳";--m:"👩🏽‍🍳";--md:"👩🏾‍🍳";--d:"👩🏿‍🍳"}
 [id="👩‍🔧"]:checked + label::before{--l:"👩🏻‍🔧";--ml:"👩🏼‍🔧";--m:"👩🏽‍🔧";--md:"👩🏾‍🔧";--d:"👩🏿‍🔧"}
 [id="👩‍🏭"]:checked + label::before{--l:"👩🏻‍🏭";--ml:"👩🏼‍🏭";--m:"👩🏽‍🏭";--md:"👩🏾‍🏭";--d:"👩🏿‍🏭"}
-[id="👩‍💼"]:checked + label::before{--l:"👩🏻‍💼";--ml:"👩🏼‍💼";--m:"👩🏽‍💼";--md:"👩🏾‍💼";--d:"👩🏿‍💼"}
+[id="🧟"]:checked + label::before{--l:"🧟🏻";--ml:"🧟🏼";--m:"🧟🏽";--md:"🧟🏾";--d:"🧟🏿"}
 [id="👩‍🔬"]:checked + label::before{--l:"👩🏻‍🔬";--ml:"👩🏼‍🔬";--m:"👩🏽‍🔬";--md:"👩🏾‍🔬";--d:"👩🏿‍🔬"}
 [id="👩‍✈️"]:checked + label::before{--l:"👩🏻‍✈️";--ml:"👩🏼‍✈️";--m:"👩🏽‍✈️";--md:"👩🏾‍✈️";--d:"👩🏿‍✈️"}
 [id="🕵️‍♀️"]:checked + label::before{--l:"🕵🏻‍♀️";--ml:"🕵🏼‍♀️";--m:"🕵🏽‍♀️";--md:"🕵🏾‍♀️";--d:"🕵🏿‍♀️"}
@@ -162,7 +162,7 @@ form > fieldset{
 	grid-auto-flow: column;
 	border-radius:1ex;
 	width:fit-content;
-	height:66dvh;
+	height:66vh;
 	margin:0 auto;
 	background-color:#000;
   color:#FFF;
@@ -178,4 +178,3 @@ header > fieldset > details[open] > ul > li > a:hover,dheader > fieldset > detai
 header > fieldset > details[open] > ul > li:not(:hover)::marker {color:transparent;}
 header > fieldset > details[open] > ul > li:hover::marker,header > fieldset > details[open] > ul > li:focus-within::marker {animation: markerGlow 0.5s infinite alternate linear}
 #f,[type="submit"]{font-size:24px}
-
