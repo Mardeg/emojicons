@@ -2,11 +2,11 @@
 /*
   Strict-Transport-Security: max-age=63072000; includeSubdomains
   Permissions-Policy: interest-cohort=(), accelerometer=(), ambient-light-sensor=(), battery=(), bluetooth=(), browsing-topics=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), serial=(), storage-access=(), sync-xhr=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()
-  Content-Security-Policy: frame-ancestors 'none'; frame-src 'none'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'self' 'sha512-FGJX5AB/xGvoqa+JydcOkREvOZ9Acly7M7QctTu0amqlCoXAjVb5S8AS62dXjiNDiWb5/ljVrf6X+2QaPIlWJQ=='; style-src-attr 'unsafe-inline';
+  Content-Security-Policy: frame-ancestors 'none'; frame-src 'none'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'self' 'sha512-NvK/IEuSPwOfbENBKWKpLDC3zpPrgytCQRqMvxH8zy9VMEXqkxbgIPafGzOsmgYFwylNwOLyTzBQ17k2wjTLdA=='; style-src-attr 'unsafe-inline';
 
 /index.htm
   ! Content-Security-Policy
-  Content-Security-Policy: frame-ancestors 'self'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'sha512-hCh0Mz3j6vwKIOp0qP6btEe8U/ILktHV8inwdjgQE6HPnBN78WdAh3JQ4oTaW4cQCsMqBVPir4toWaPC93ETgw==' ; style-src-attr 'unsafe-inline';
+  Content-Security-Policy: frame-ancestors 'self'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'sha512-FGJX5AB/xGvoqa+JydcOkREvOZ9Acly7M7QctTu0amqlCoXAjVb5S8AS62dXjiNDiWb5/ljVrf6X+2QaPIlWJQ==' 'sha512-NvK/IEuSPwOfbENBKWKpLDC3zpPrgytCQRqMvxH8zy9VMEXqkxbgIPafGzOsmgYFwylNwOLyTzBQ17k2wjTLdA=='; style-src-attr 'unsafe-inline';
   
 /locale.svg
   ! Content-Security-Policy
