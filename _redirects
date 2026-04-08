@@ -1,4 +1,4 @@
-/en* /#en-GB 
+/en* /#en-GB 301
 /fr* /#fr 301
 /de* /#de 301
 /ru* /#ru 301
@@ -16,7 +16,7 @@
 /ur* /#ur-IN 301
 /or* /#or-IN 301
 /mr* /#mr-IN 301
-/?en* /#en-GB 
+/?en* /#en-GB 301
 /?fr* /#fr 301
 /?de* /#de 301
 /?ru* /#ru 301
