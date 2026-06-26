@@ -22,3 +22,5 @@ and Indian languages:
 * ur (Urdu)
 * or (Odia)
 * mr (Marathi)
+
+[![Star History Chart](https://starhistory.link/Mardeg/emojicons.svg?theme=cyan)](https://starhistory.link/Mardeg/emojicons)
