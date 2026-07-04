@@ -1,0 +1,23 @@
+# Your Character
+
+> Multilingual site favicon generator using emojis in SVG as emojicons
+
+## International Versions
+* [English Homepage](/) - Main website in English.
+* [French / Français](/#fr) - Website translated into French.
+* [German / Deutsch](/#de) - Website translated into German.
+* [Russian / русский](/#ru) - Website translated into Russian.
+* [Hindi / हिन्दी](/#hi-IN) - Website translated into Hindi.
+* [Bengali / বাংলা](/#bn-IN) - Website translated into Bengali.
+* [Tamil / தமிழ்](/#ta-IN) - Website translated into Tamil.
+* [Telugu / తెలుగు](/#te-IN) - Website translated into Telugu.
+* [Gujarati / ગુજરાતી](/#gu-IN) - Website translated into Gujarati.
+* [Punjabi / ਪੰਜਾਬੀ](/#pa-IN) - Website translated into Punjabi.
+* [Urdu / اردو](/#ur-IN) - Website translated into Urdu.
+* [Odia / ଓଡ଼ିଆ](/#or-IN) - Website translated into Odia.
+* [Marathi / मराठी](/#mr-IN) - Website translated into Marathi.
+* [Japanese / 日本語](/#ja-JP) - Website translated into Japanese.
+* [Spanish / Español](/#es-013) - Website translated into Spanish.
+* [Italian / Italiano](/#it) - Website translated into Italian.
+* [Dutch / Nederlands](/#nl) - Website translated into Dutch.
+* [Swedish / Svenska](/#sv-SE) - Website translated into Swedish.
