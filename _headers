@@ -11,7 +11,3 @@
 /locale.svg
   ! Content-Security-Policy
   Content-Security-Policy: frame-src 'self';
-
-/*.svgz
-  Content-Encoding: gzip
-  Content-Type: image/svg+xml; charset=utf-8
