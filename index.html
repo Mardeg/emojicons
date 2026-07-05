@@ -117,7 +117,7 @@ function encodeFav(f) {
 	typenext(bt,qs,output[tc++],document.querySelector("audio"));
 }
 const faviconHref = emoji =>
-  `<svg xmlns="http://www.w3.org/2000/svg"><style>svg{width:100vw;height:100vh}</style><text x="50%" y="47%" dominant-baseline="central" text-anchor="middle" font-size="84vh">${emoji}</text></svg>`
+  `<svg xmlns="http://www.w3.org/2000/svg"><style>svg{width:100vw;height:100vh}</style><text x="50%" y="47%" dominant-baseline="central" text-anchor="middle" font-size="84vh">${emoji}</text></svg>`;
 if (['en-GB','fr', 'de', 'ru', 'hi-IN', 'bn-IN', 'ta-IN', 'te-IN', 'gu-IN', 'pa-IN', 'ur-IN', 'or-IN', 'mr-IN', 'ja-JP', 'es-013', 'it', 'nl', 'sv-SE'].includes(window.location.pathname.split('/').filter(Boolean)[0]) && !window.location.hash) {
       window.location.hash = window.location.pathname.split('/').filter(Boolean)[0];
 }
