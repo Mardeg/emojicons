@@ -3,7 +3,7 @@
 > Multilingual site favicon generator using emojis in SVG as emojicons
 
 ## International Versions
-* [English Homepage](/) - Main website in English.
+* [English / Main](/) - Default site version in English.
 * [French / Français](/#fr) - Website translated into French.
 * [German / Deutsch](/#de) - Website translated into German.
 * [Russian / русский](/#ru) - Website translated into Russian.
