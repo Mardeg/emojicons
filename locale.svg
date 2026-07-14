@@ -3,7 +3,7 @@
 <title>🤠Character Selection</title>
 <style>
 /* <![CDATA[ */
-svg{width:100dvw;height:100dvh;background-color:#CCC}
+svg{color-scheme:light dark;width:100dvw;height:100dvh;background-color:light-dark(#CCC,#333);}
 iframe{width:510px;height:1000px;border:0}
 /* ]]> */
 </style>
