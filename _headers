@@ -6,7 +6,7 @@
 
 /index.htm
   ! Content-Security-Policy
-  Content-Security-Policy: frame-ancestors 'self'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'sha512-ef6932b9720f3a6022d6913d10619c5711858f0cc10a48117e800d8e06df41e8dd55013087b6744978668bdb3f9165715f2eccdd429b80269611b6d993740e70' 'sha512-NvK/IEuSPwOfbENBKWKpLDC3zpPrgytCQRqMvxH8zy9VMEXqkxbgIPafGzOsmgYFwylNwOLyTzBQ17k2wjTLdA=='; style-src-attr 'unsafe-inline';
+  Content-Security-Policy: frame-ancestors 'self'; media-src 'self' data:; img-src 'self' data: https://www.ssa.gov; connect-src 'self' blob: data:; style-src 'sha512-XEp2LiQKXE4U0l2KJ4lpGEjuLRg5c0on3wREsLHl9zCnCBH4v+GeIEM5SJzQzALagq0FDHZ3pPmg707Mi44VCQ==' 'sha512-NvK/IEuSPwOfbENBKWKpLDC3zpPrgytCQRqMvxH8zy9VMEXqkxbgIPafGzOsmgYFwylNwOLyTzBQ17k2wjTLdA=='; style-src-attr 'unsafe-inline';
   
 /locale.svg
   ! Content-Security-Policy
