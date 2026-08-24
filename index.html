@@ -58,11 +58,6 @@ document.onreadystatechange = () => {if(document.readyState === "interactive") {
     document.querySelector("form > fieldset").addEventListener("click",() => choice());
     let lh = location.hash;
     if((lh)&&(lh.at(-1)=="N")){document.querySelector("header > fieldset > details").setAttribute('id',lh.substring(1));location.hash = lh;}
-    if(!("MozAppearance" in document.documentElement.style)){
-    	for (const cb of document.querySelectorAll("details > ul > li > a[hreflang]")) {
-		    cb.href=`javascript:document.querySelector('header > fieldset > details').setAttribute('id','${cb.hreflang}');location.hash = '#${cb.hreflang}';void(0)`
-      }
-    }
     if (lh) current(lh);
   }
 }
