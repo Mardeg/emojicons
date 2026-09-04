@@ -213,8 +213,8 @@ legend {background-color:#FFF;color:#000;border-style:groove;border-radius:0.5ex
 header > fieldset > details {cursor:pointer;display:inline-block}
 header > fieldset > details > summary {list-style:none;font-size:18pt;cursor:help}
 header > fieldset > details > ul {position:fixed;left:calc(50% - 9ex);top:4ex}
-header > fieldset > details > ul > li {background-color:#FFF}
-header > fieldset > details[open] > ul > li > a:hover,dheader > fieldset > details[open] > ul > li > a:focus-visible{background-color:#CCC}
+header > fieldset > details > ul > li {background-color:light-dark(#FFF,#000)}
+header > fieldset > details[open] > ul > li > a:hover,dheader > fieldset > details[open] > ul > li > a:focus-visible{background-color:light-dark(#CCC,#333)}
 header > fieldset > details[open] > ul > li:not(:hover)::marker {color:transparent;}
 header > fieldset > details[open] > ul > li:hover::marker,header > fieldset > details[open] > ul > li:focus-within::marker {animation: markerGlow 0.5s infinite alternate linear}
 #f,[type="submit"]{font-size:24px}
