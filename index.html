@@ -50,7 +50,7 @@ function choice(L) {
 	for (o of ['h1','form > fieldset > legend']){document.querySelector(o).setAttribute('lang',H)}
 	document.querySelector('form > fieldset > legend').setAttribute('data-' + H + 'c',JSON.parse(document.forms[0].elements['c'].value)[H]);
     document.querySelector('input[type="submit"]').setAttribute('value',{ru:'Фавикон',hi:'फ़ेविकॉन',bn:'ফেভিকন',ta:'ஃபேவிகான்',te:'ఫేవికాన్',gu:'ફેવિકોન',pa:'ਫੇਵੀਕੋਨ',ur:'فیویکن',or:'ଫାଭିକନ୍',mr:'फेविकॉन',ja:'ファビコン'}[H]||'Favicon');
-	document.querySelector('svg > a > text[fill="#FFFFFF"]').textContent = document.querySelector('link[href*="#' + H + '"]').dataset.z || "ZERO";
+	document.querySelector('svg > text[fill="#FFFFFF"]').textContent = document.querySelector('link[href*="#' + H + '"]').dataset.z || "ZERO";
 	document.querySelector('input:checked + label').scrollIntoView({behavior:'smooth', block:'center'});
 	document.querySelector('input[type="text"]').placeholder = document.querySelector('input:checked').id;
 }
